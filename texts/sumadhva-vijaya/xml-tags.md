@@ -1,0 +1,17 @@
+# XML Tags used in Sumadhva Vijaya
+- title: Title of the book
+- sarga-summary: Summary of sarga
+- sarga-num: Sarga number
+- verse-num: Shloka number
+- verse: Shloka
+- anvaya: Shloka anvaya
+- vya-vkp: Vyakhyana of श्री डा व्यासनकेरे प्रभञ्जनाचार्य, originally in Kannada, translated to Samskrit
+- vya-np: Vyakhyana by the author himself (श्री नारायणपण्डिताचार्य), titled भावप्रकाशिका
+- vya-vt: Vyakhyana by श्री विश्वपतितीर्थ titled पदार्थदीपिकोद्बोधिका
+- vya-cs: Vyakhyana by श्री छलारीशेषाचार्य titled मन्दोपकारिणी
+- p: paragraph
+- s: segment of text, to be marked for attributes like language/emphasis/superscript/ps etc
+  - Attributes:-
+    - em: Emphasis / bold
+    - lang: kan/eng/san, 3 letter iso standard for language
+    - id: Id associated with a segment for PS, meaning, grammar etc
