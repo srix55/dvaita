@@ -3,12 +3,13 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'package:site_builder_dart/head_gen.dart';
 
+String publicSiteFolder = p.join('..', '..', '..', 'docs');
 main() async {
   checkPresentWorkingDirectory();
-  await clearOutPublicFolder();
+  await clearOutDocsFolder();
   await copyCSS();
 
-  final indexFile = File(p.join('..', '..', 'public-site', 'index.html'));
+  final indexFile = File(p.join(publicSiteFolder, 'index.html'));
 
   final html = '''
 <!doctype html>
@@ -59,11 +60,11 @@ void checkPresentWorkingDirectory() {
 
 Future<void> copyCSS() async {
   final sourcePath = p.join('lib', 'main.css');
-  final destinationDir = Directory(p.join('..', '..', 'public-site'));
+  final destinationDir = Directory(publicSiteFolder);
 
   // Ensure destination directory exists
   if (!destinationDir.existsSync()) {
-    print("Destination directory 'public-site' does not exist");
+    print("Destination directory 'docs' does not exist");
     exit(1);
   }
 
@@ -78,8 +79,8 @@ Future<void> copyCSS() async {
   }
 }
 
-Future<void> clearOutPublicFolder() async {
-  final dir = Directory(p.join('..', '..', 'public-site'));
+Future<void> clearOutDocsFolder() async {
+  final dir = Directory(publicSiteFolder);
 
   if (await dir.exists()) {
     await for (final entity in dir.list(recursive: false)) {
