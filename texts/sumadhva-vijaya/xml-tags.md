@@ -1,17 +1,84 @@
 # XML Tags used in Sumadhva Vijaya
+- book: Book begin
 - title: Title of the book
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - sarga-summary: Summary of sarga
-- sarga-num: Sarga number
-- verse-num: Shloka number
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
+- sarga: Sarga tags
+  - Attributes:-
+    - id: Number of the sarga
 - verse: Shloka
+  - Attributes:-
+    - id: Id of the shloka
+    - lang: kan/eng/san, 3 letter iso standard for language
+    - alankara: Alankara of the shloka
+    - vruttam: vrutta of the shloka
+- shloka: actual shloka text
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - anvaya: Shloka anvaya
-- vya-vkp: Vyakhyana of श्री डा व्यासनकेरे प्रभञ्जनाचार्य, originally in Kannada, translated to Samskrit
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - vya-np: Vyakhyana by the author himself (श्री नारायणपण्डिताचार्य), titled भावप्रकाशिका
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - vya-vt: Vyakhyana by श्री विश्वपतितीर्थ titled पदार्थदीपिकोद्बोधिका
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - vya-cs: Vyakhyana by श्री छलारीशेषाचार्य titled मन्दोपकारिणी
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
+- vya-vkp: Vyakhyana of श्री डा व्यासनकेरे प्रभञ्जनाचार्य, originally in Kannada, translated to Samskrit
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - p: paragraph
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - s: segment of text, to be marked for attributes like language/emphasis/superscript/ps etc
   - Attributes:-
     - em: Emphasis / bold
     - lang: kan/eng/san, 3 letter iso standard for language
-    - id: Id associated with a segment for PS, meaning, grammar etc
+    - id: Id associated with a segment for PS, meaning, grammar, etc
+- quick-meaning: Quick meanings of a segment. Helpful in annotating text with the meaning.
+  - Attributes:-
+    - ref-id: Id in reference to a marked segment
+    - lang: kan/eng/san, 3 letter iso standard for language
+- ps: post section
+- ps-ref: reference to a post section
+  - Attributes:-
+    - ref-id: Id in reference to a marked segment
+    - lang: kan/eng/san, 3 letter iso standard for language
+- meanings-section: Section defining meanings & linga of words
+- meaning-word: Word with its comma-separated meaning(s)
+  - Attributes:-
+    - ref-id: Id in reference to a marked segment
+    - lang: kan/eng/san, 3 letter iso standard for language
+- grammar-section: Section defining grammatical points
+- grammar-point: A grammatical point
+  - Attributes:-
+    - ref-id: Id in reference to a marked segment
+    - lang: kan/eng/san, 3 letter iso standard for language
+- shabda-roopa:
+  - Attributes
+    - ending: अ, इ, etc
+    - linga: पु, स्त्री, न
+    - name: शब्द name. example: राम
+  - vibhakti
+    - id: प्र, द्वि, तृ, च, प, ष, स, सं
+      - vachana:
+        - Attributes:-
+          - id: एक, द्वि, बहु
+- kriya-roopa:
+  - Attributes:-
+    - dhatu
+    - lakara
+    - dhatu-meaning
+    - gana
+  - purusha
+    - id: प्र, म, उ
+    - vachana:
+      - Attributes:-
+        - id: एक, द्वि, बहु
+
