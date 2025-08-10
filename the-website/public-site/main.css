@@ -1,0 +1,17 @@
+body {
+    margin: 15px;
+    background-color: white;
+    color: #1A659E;
+}
+
+header h1 {
+    font-family: "Noto Sans Devanagari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    /*color: red;*/
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}

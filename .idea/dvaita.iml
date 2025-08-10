@@ -5,8 +5,14 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/the-website/generator/site_builder_dart/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/the-website/generator/site_builder_dart/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/the-website/generator/site_builder_dart/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="purecss" level="application" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
