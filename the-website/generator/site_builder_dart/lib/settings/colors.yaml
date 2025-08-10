@@ -1,0 +1,21 @@
+color-themes:
+  theme1:
+    name: Purple
+    light:
+      background: FFFFFF
+      heading: 000000
+      text: 1A659E
+      shloka: 000000
+      anvaya: 000000
+      ps: 000000
+      inline-meaning: 000000
+      divider: 000000
+    dark:
+      background: 000000
+      heading: FFFFFF
+      text: FFFFFF
+      shloka: FFFFFF
+      anvaya: FFFFFF
+      ps: FFFFFF
+      inline-meaning: FFFFFF
+      divider: FFFFFF

@@ -1,38 +1,46 @@
 # XML Tags used in Sumadhva Vijaya
 - book: Book begin
-- title: Title of the book
+- book-title: Title of the book
   - Attributes:-
     - lang: kan/eng/san, 3 letter iso standard for language
-- sarga-summary: Summary of sarga
+- vyakhyana-info: Details related to the vyakhyana
+  - vyakhyana-id: Id of the vyakhyana
+  - vyakhyana-title: Title of the vyakhyana
+    - Attributes:-
+      - lang: kan/eng/san, 3 letter iso standard for language
+  - vyakhyana-author: Author of the vyakhyana
+    - Attributes:-
+      - lang: kan/eng/san, 3 letter iso standard for language
+  - vyakhyana-lang: kan/eng/san, 3 letter iso standard for language
+- chapter:
   - Attributes:-
+    - name: Name of the chapter
+    - number: Chapter number
     - lang: kan/eng/san, 3 letter iso standard for language
-- sarga: Sarga tags
+- text-with-heading
+  - heading:
+    - Attributes:-
+      - level: 1, 2, 3, 4
+      - lang: kan/eng/san, 3 letter iso standard for language
+  - heading-content:
+    - Attributes:-
+      - lang: kan/eng/san, 3 letter iso standard for language
+- moola: The original text
   - Attributes:-
-    - id: Number of the sarga
-- verse: Shloka
-  - Attributes:-
-    - id: Id of the shloka
+    - id: Id of the moola
     - lang: kan/eng/san, 3 letter iso standard for language
-    - alankara: Alankara of the shloka
-    - vruttam: vrutta of the shloka
-- shloka: actual shloka text
-  - Attributes:-
-    - lang: kan/eng/san, 3 letter iso standard for language
-- anvaya: Shloka anvaya
-  - Attributes:-
-    - lang: kan/eng/san, 3 letter iso standard for language
-- vya-np: Vyakhyana by the author himself (श्री नारायणपण्डिताचार्य), titled भावप्रकाशिका
-  - Attributes:-
-    - lang: kan/eng/san, 3 letter iso standard for language
-- vya-vt: Vyakhyana by श्री विश्वपतितीर्थ titled पदार्थदीपिकोद्बोधिका
-  - Attributes:-
-    - lang: kan/eng/san, 3 letter iso standard for language
-- vya-cs: Vyakhyana by श्री छलारीशेषाचार्य titled मन्दोपकारिणी
-  - Attributes:-
-    - lang: kan/eng/san, 3 letter iso standard for language
-- vya-vkp: Vyakhyana of श्री डा व्यासनकेरे प्रभञ्जनाचार्य, originally in Kannada, translated to Samskrit
-  - Attributes:-
-    - lang: kan/eng/san, 3 letter iso standard for language
+  - shloka: actual shloka text
+    - Attributes:-
+      - lang: kan/eng/san, 3 letter iso standard for language
+      - alankara: Alankara of the shloka
+      - vruttam: vrutta of the shloka
+  - anvaya: Shloka anvaya
+    - Attributes:-
+      - lang: kan/eng/san, 3 letter iso standard for language
+  - vyakhyana: The actual vyakhyana
+    - Attributes:-
+      - lang: kan/eng/san, 3 letter iso standard for language
+      - ref-id: Id of the vyakhyana, corresponds to vyakhyana-id in vyakhyana-info
 - p: paragraph
   - Attributes:-
     - lang: kan/eng/san, 3 letter iso standard for language
@@ -76,9 +84,10 @@
     - lakara
     - dhatu-meaning
     - gana
+    - prayoga: kartari/karmani
+    - padi: atmane/parasmai/ubhaya
   - purusha
     - id: प्र, म, उ
     - vachana:
       - Attributes:-
         - id: एक, द्वि, बहु
-

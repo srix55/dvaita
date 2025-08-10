@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <book>
-    <title lang="san">सुमध्वविजयः</title>
-    <sarga id="1">
-        <sarga-summary lang="san">प्रथमः सर्गः श्रीमदाचार्याणां जन्मविषये प्रस्तौति ।</sarga-summary>
-        <verse id="1" alankara="उपमालङ्कारः" vruttam="मालिनीवृत्तम्">
-            <shloka lang="san">कान्ताय कल्याणगुणैकधाम्ने नवद्युनाथप्रतिमप्रभाय ।
+    <book-title lang="san">सुमध्वविजयः</book-title>
+    <vyakhyana-info>
+        <vyakhyana-id>np</vyakhyana-id>
+        <vyakhyana-title lang="san">भावप्रकाशिका</vyakhyana-title>
+        <vyakhyana-author lang="san">श्री नारायणपण्डिताचार्य</vyakhyana-author>
+        <vyakhyana-lang>san</vyakhyana-lang>
+    </vyakhyana-info>
+    <vyakhyana-info>
+        <vyakhyana-id>vpt</vyakhyana-id>
+        <vyakhyana-title lang="san">पदार्थदीपिकोद्बोधिका</vyakhyana-title>
+        <vyakhyana-author lang="san">श्री विश्वपतितीर्थ</vyakhyana-author>
+        <vyakhyana-lang>san</vyakhyana-lang>
+    </vyakhyana-info>
+    <vyakhyana-info>
+        <vyakhyana-id>csa</vyakhyana-id>
+        <vyakhyana-title lang="san">मन्दोपकारिणी</vyakhyana-title>
+        <vyakhyana-author lang="san">श्री छलारीशेषाचार्य</vyakhyana-author>
+        <vyakhyana-lang>san</vyakhyana-lang>
+    </vyakhyana-info>
+    <vyakhyana-info>
+        <vyakhyana-id>vkp</vyakhyana-id>
+        <vyakhyana-title lang="kan">ಸುಮಧ್ವವಿಜಯ</vyakhyana-title>
+        <vyakhyana-author lang="san">डा. व्यासनकेरे प्रभञ्जनाचहार्य</vyakhyana-author>
+        <vyakhyana-lang>kan</vyakhyana-lang>
+    </vyakhyana-info>
+    <chapter number="1" name="सर्ग १" lang="san">
+        <text-with-heading>
+            <heading lang="san" level="1">प्रथमसर्गस्य सारांशः</heading>
+            <heading-content lang="san">प्रथमः सर्गः श्रीमदाचार्याणां जन्मविषये प्रस्तौति ।</heading-content>
+        </text-with-heading>
+        <moola id="1">
+            <shloka lang="san" alankara="उपमालङ्कारः" vruttam="मालिनीवृत्तम्">कान्ताय कल्याणगुणैकधाम्ने नवद्युनाथप्रतिमप्रभाय ।
                 नारायणायाखिलकारणाय श्रीप्राणनाथाय नमस्करोमि ॥</shloka>
             <anvaya lang="san">(अहं) <s id="w1">कान्ताय</s> कल्याणगुणैकधाम्ने नवद्युनाथप्रतिमप्रभाय अखिलकारणाय श्रीप्राणनाथाय नारायणाय नमस्करोमि ।</anvaya>
             <quick-meaning ref-id="w1" lang="san">वि. मनोहराय, सुन्दराय</quick-meaning>
-            <vya-np lang="san">श्रीनारायणपण्डिताचार्याणां व्याख्यानः</vya-np>
-            <vya-vkp lang="san">
+            <vyakhyana lang="san" ref-id="np">श्रीनारायणपण्डिताचार्याणां व्याख्यानः</vyakhyana>
+            <vyakhyana lang="san" ref-id="vkp">
                 <p>श्रीप्रभञ्जनाचार्याणां व्याख्यानः - श्रीमन्नारायणः सुन्दरः । मङ्गलगुणानाम् आश्रयः । नवोदितसूर्यवत् कान्तियुक्तः । समग्रस्य विश्वस्य हेतुः । लक्श्म्याः पतिः । श्रीमुख्यप्राणस्य स्वामी । तादृशं महाविष्णुम् अहं नमामि ।</p>
                 <p>अहं तस्मै भगवते प्रणामं करोमि, यस्य स्वरूपम् अतीव सुन्दरं तथा च चित्ताकर्षकम् अस्ति (कान्ताय)। यः सर्वेषां शुभगुणानाम् एकमात्रम् आगारम् अस्ति (कल्याणगुणैकधाम्ने)। यस्य शरीरस्य कान्तिः बालसूर्यस्य तेजः इव प्रकाशते (नवद्युनाथप्रतिमप्रभाय)। यः स्वयं नारायणः, सर्वेषां जीवानाम् अन्तिमः आश्रयः अस्ति। यः एव अस्य समग्रस्य ब्रह्माण्डस्य आदिकारणम् अस्ति (अखिलाकारणाय)। यः देव्याः लक्ष्म्याः अपि प्राणप्रियः स्वामी अस्ति (श्रीप्राणनाथाय)।</p>
                 <p>एवं प्रकारेण, अयं श्लोकः भगवतः सौन्दर्यम्, गुणपूर्णताम्, तेजस्विताम्, दार्शनिकस्वरूपम्, ऐश्वर्यं च <s id="w2">युगपत्</s> वर्णयति। "नमस्करोमि" इति क्रियापदेन भक्तस्य सम्पूर्णः आत्मसमर्पणभावः प्रकटितो भवति।</p>
-            </vya-vkp>
+            </vyakhyana>
             <quick-meaning ref-id="w2" lang="eng">simultaneously</quick-meaning>
             <meanings-section>
                 <meaning-word ref-id="w1" lang="san">कान्त वि. - सुन्दर .वि, मनोरम .वि</meaning-word>
@@ -21,6 +48,6 @@
             <grammar-section>
                 <grammar-point ref-id="w1">अकारान्तः पुल्लिङ्गः कान्त शब्दः</grammar-point>
             </grammar-section>
-        </verse>
-    </sarga>
+        </moola>
+    </chapter>
 </book>

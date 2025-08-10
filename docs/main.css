@@ -1,7 +1,21 @@
 body {
-    margin: 15px;
-    background-color: white;
+    margin: 20px;
+    background-color: #FFFFFF;
     color: #1A659E;
+    font-family: "Noto Sans Devanagari", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+body a {
+    text-decoration: none;
+    color: #1A659E;
+}
+
+footer {
+    margin-top: 40px;
 }
 
 header h1 {
@@ -14,4 +28,5 @@ header h1 {
     font-style: normal;
     font-variation-settings:
             "wdth" 100;
-}
+}    
+    
