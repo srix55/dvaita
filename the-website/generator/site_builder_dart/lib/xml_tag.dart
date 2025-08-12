@@ -20,7 +20,9 @@ enum XmlTag {
   ps(attributes: {}, tag: 'ps'),
   ps_ref(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'ps-ref'),
   meanings_section(attributes: {}, tag: 'meanings-section'),
+  meaning_point(attributes: {}, tag: 'meaning-point'),
   meaning_word(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'meaning-word'),
+  meaning(attributes: {Attribute.lang}, tag: 'meaning'),
   grammar_section(attributes: {}, tag: 'grammar-section'),
   grammar_point(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'grammar-point'),
   shabda_roopa(attributes: {Attribute.ending, Attribute.linga, Attribute.name}, tag: 'shabda-roopa'),
@@ -31,6 +33,13 @@ enum XmlTag {
 
   final Set<Attribute> attributes;
   final String tag;
+
+  static XmlTag fromTag(String tag) {
+    for (XmlTag t in XmlTag.values) {
+      if (t.tag == tag) return t;
+    }
+    throw Exception('No such tag: $tag');
+  }
 
   const XmlTag({required this.attributes, required this.tag});
 }

@@ -2,20 +2,46 @@ color-themes:
   theme1:
     name: Purple
     light:
-      background: FFFFFF
-      heading: 000000
-      text: 1A659E
-      shloka: 000000
-      anvaya: 000000
-      ps: 000000
-      inline-meaning: 000000
-      divider: 000000
+      background: 'FFFFFF'
+
+      # Headings like anvaya, vyakhyana, shabdartha, etc
+      meta-heading: '000000'
+
+      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
+      inline-word: '000000'
+
+      # General text
+      text: '1A659E'
+      shloka: '000000'
+      anvaya: '000000'
+      ps: '000000'
+
+      # The superscript/subscript text inline
+      inline-meaning: '000000'
+
+      # The words in the meanings section
+      meaning-word: '000000'
+      divider: '000000'
     dark:
-      background: 000000
-      heading: FFFFFF
-      text: FFFFFF
-      shloka: FFFFFF
-      anvaya: FFFFFF
-      ps: FFFFFF
-      inline-meaning: FFFFFF
-      divider: FFFFFF
+      background: '000000'
+      # Headings like anvaya, vyakhyana, shabdartha, etc
+      meta-heading: 'FFFFFF'
+
+      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
+      inline-word: 'FFFFFF'
+
+      # General text
+      text: 'FFFFFF'
+      shloka: 'FFFFFF'
+      anvaya: 'FFFFFF'
+      ps: 'FFFFFF'
+
+      # The superscript/subscript text inline
+      inline-meaning: 'FFFFFF'
+
+      # The words in the meanings section
+      meaning-word: 'FFFFFF'
+      divider: 'FFFFFF'
+
+# Used in the generation of website, pdf & odt
+selected-theme: theme1

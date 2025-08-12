@@ -1,0 +1,124 @@
+# All font families should be google fonts
+font-themes:
+  theme1:
+    name: default
+    san:
+      chapter-title-font-family: 'Noto Sans Devanagari'
+      chapter-title-weight: '500'
+      chapter-title-size: '40px'
+      
+      # Sections in the chapter, with heading & content
+      secondary-heading-font-family: 'Noto Sans Devanagari'
+      secondary-heading-weight: '500'
+      secondary-heading-size: '30px'
+      
+      # Meta headings like vyakhyana, grammar, anvaya, etc
+      meta-heading-font-family: 'Noto Sans Devanagari'
+      meta-heading-weight: '500'
+      meta-heading-size: '14px'
+      
+      # General content
+      text-font-family: 'Noto Sans Devanagari'
+      text-size: '21px'
+      text-weight: '400'
+      
+      # Shloka meta data like shloka number, etc
+      shloka-meta-font-family: 'Noto Sans Devanagari'
+      shloka-meta-size: '12px'
+      shloka-meta-weight: '300'
+      
+      # Actual shloka text
+      shloka-font-family: 'Noto Sans Devanagari'
+      shloka-weight: '500'
+      shloka-size: '40px'
+      
+      # Any ps points
+      ps-font-family: 'Noto Sans Devanagari'
+      ps-weight: '400'
+      ps-size: '12px'
+      
+      # inline-meanings (superscripts/subscripts) for text segments
+      inline-font-family: 'Noto Sans Devanagari'
+      inline-weight: '400'
+      inline-size: '12px'
+    kan:
+      chapter-title-font-family: 'Noto Sans Kannada'
+      chapter-title-weight: '500'
+      chapter-title-size: '40px'
+
+      # Sections in the chapter, with heading & content
+      secondary-heading-font-family: 'Noto Sans Kannada'
+      secondary-heading-weight: '500'
+      secondary-heading-size: '30px'
+
+      # Meta headings like vyakhyana, grammar, anvaya, etc
+      meta-heading-font-family: 'Noto Sans Kannada'
+      meta-heading-weight: '500'
+      meta-heading-size: '14px'
+
+      # General content
+      text-font-family: 'Noto Sans Kannada'
+      text-size: '21px'
+      text-weight: '400'
+
+      # Shloka meta data like shloka number, etc
+      shloka-meta-font-family: 'Noto Sans Kannada'
+      shloka-meta-size: '12px'
+      shloka-meta-weight: '300'
+
+      # Actual shloka text
+      shloka-font-family: 'Noto Sans Kannada'
+      shloka-weight: '500'
+      shloka-size: '40px'
+
+      # Any ps points
+      ps-font-family: 'Noto Sans Kannada'
+      ps-weight: '400'
+      ps-size: '12px'
+
+      # inline-meanings (superscripts/subscripts) for text segments
+      inline-font-family: 'Noto Sans Kannada'
+      inline-weight: '400'
+      inline-size: '12px'
+    eng:
+      chapter-title-font-family: 'Roboto'
+      chapter-title-weight: '500'
+      chapter-title-size: '40px'
+
+      # Sections in the chapter, with heading & content
+      secondary-heading-font-family: 'Roboto'
+      secondary-heading-weight: '500'
+      secondary-heading-size: '30px'
+
+      # Meta headings like vyakhyana, grammar, anvaya, etc
+      meta-heading-font-family: 'Roboto'
+      meta-heading-weight: '500'
+      meta-heading-size: '14px'
+
+      # General content
+      text-font-family: 'Roboto'
+      text-size: '21px'
+      text-weight: '400'
+
+      # Shloka meta data like shloka number, etc
+      shloka-meta-font-family: 'Roboto'
+      shloka-meta-size: '12px'
+      shloka-meta-weight: '300'
+
+      # Actual shloka text
+      shloka-font-family: 'Roboto'
+      shloka-weight: '500'
+      shloka-size: '40px'
+
+      # Any ps points
+      ps-font-family: 'Roboto'
+      ps-weight: '400'
+      ps-size: '12px'
+
+      # inline-meanings (superscripts/subscripts) for text segments
+      inline-font-family: 'Roboto'
+      inline-weight: '400'
+      inline-size: '12px'
+
+# Used in the generation of website, pdf & odt
+selected-theme: theme1

@@ -25,6 +25,12 @@
         <vyakhyana-author lang="san">डा. व्यासनकेरे प्रभञ्जनाचहार्य</vyakhyana-author>
         <vyakhyana-lang>kan</vyakhyana-lang>
     </vyakhyana-info>
+    <chapter number="0" name="प्रस्तावना" lang="san">
+        <text-with-heading>
+            <heading lang="san" level="1">पीठिका</heading>
+            <heading-content lang="san">ग्रन्थस्य विषये किञ्चित् ।</heading-content>
+        </text-with-heading>
+    </chapter>
     <chapter number="1" name="सर्ग १" lang="san">
         <text-with-heading>
             <heading lang="san" level="1">प्रथमसर्गस्य सारांशः</heading>
@@ -43,7 +49,9 @@
             </vyakhyana>
             <quick-meaning ref-id="w2" lang="eng">simultaneously</quick-meaning>
             <meanings-section>
-                <meaning-word ref-id="w1" lang="san">कान्त वि. - सुन्दर .वि, मनोरम .वि</meaning-word>
+                <meaning-point>
+                    <meaning-word ref-id="w1" lang="san">कान्त वि.</meaning-word><meaning>सुन्दर .वि, मनोरम .वि</meaning>
+                </meaning-point>
             </meanings-section>
             <grammar-section>
                 <grammar-point ref-id="w1">अकारान्तः पुल्लिङ्गः कान्त शब्दः</grammar-point>

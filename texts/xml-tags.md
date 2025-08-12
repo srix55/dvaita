@@ -20,7 +20,7 @@
 - text-with-heading
   - heading:
     - Attributes:-
-      - level: 1, 2, 3, 4
+      - level: 1, 2
       - lang: kan/eng/san, 3 letter iso standard for language
   - heading-content:
     - Attributes:-
@@ -59,15 +59,19 @@
     - ref-id: Id in reference to a marked segment
     - lang: kan/eng/san, 3 letter iso standard for language
 - meanings-section: Section defining meanings & linga of words
-- meaning-word: Word with its comma-separated meaning(s)
-  - Attributes:-
-    - ref-id: Id in reference to a marked segment
-    - lang: kan/eng/san, 3 letter iso standard for language
+  - meaning-point:
+    - meaning-word: Word referenced
+      - Attributes:-
+        - ref-id: Id in reference to a marked segment
+        - lang: kan/eng/san, 3 letter iso standard for language
+    - meaning: Word with its comma-separated meaning(s)
+      - Attributes:-
+        - lang: kan/eng/san, 3 letter iso standard for language
 - grammar-section: Section defining grammatical points
-- grammar-point: A grammatical point
-  - Attributes:-
-    - ref-id: Id in reference to a marked segment
-    - lang: kan/eng/san, 3 letter iso standard for language
+  - grammar-point: A grammatical point
+    - Attributes:-
+      - ref-id: Id in reference to a marked segment
+      - lang: kan/eng/san, 3 letter iso standard for language
 - shabda-roopa:
   - Attributes
     - ending: अ, इ, etc

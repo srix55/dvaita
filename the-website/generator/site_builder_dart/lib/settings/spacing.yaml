@@ -1,6 +1,12 @@
-page-margin: 20px
-para-para: 15px
-shloka_pre-shloka: 10px
-shloka-anvaya: 10px
-heading-content: 5px
+spacing-themes:
+  theme1:
+    name: default
+    page-margin: '20px'
+    para-margin-top-bottom: '10px'
+    chapter-title-margin-bottom: '20px'
+    divider-margin-top-bottom: '10px'
+    meta-heading-to-content: '20px'
+    shloka-meta-to-shloka: '10px'
 
+# Used in the generation of website, pdf & odt
+selected-theme: theme1
