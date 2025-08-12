@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<book>
+<book id="smv" book-type="kavya">
     <book-title lang="san">सुमध्वविजयः</book-title>
     <vyakhyana-info>
         <vyakhyana-id>np</vyakhyana-id>

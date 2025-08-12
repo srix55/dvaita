@@ -1,5 +1,8 @@
 # XML Tags used in Sumadhva Vijaya
 - book: Book begin
+  - Attributes:-
+    - id: Id of the book
+    - book-type: kavya/gadya
 - book-title: Title of the book
   - Attributes:-
     - lang: kan/eng/san, 3 letter iso standard for language
@@ -29,6 +32,9 @@
   - Attributes:-
     - id: Id of the moola
     - lang: kan/eng/san, 3 letter iso standard for language
+  - gadya: Moola text in gadya
+    - Attributes:-
+      - lang: kan/eng/san, 3 letter iso standard for language
   - shloka: actual shloka text
     - Attributes:-
       - lang: kan/eng/san, 3 letter iso standard for language

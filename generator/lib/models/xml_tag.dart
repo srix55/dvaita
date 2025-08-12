@@ -1,5 +1,5 @@
 enum XmlTag {
-  book(attributes: {}, tag: 'book'),
+  book(attributes: {Attribute.id, Attribute.book_type}, tag: 'book'),
   book_title(attributes: {Attribute.lang}, tag: 'book-title'),
   vyakhyana_info(attributes: {}, tag: 'vyakhyana-info'),
   vyakhyana_id(attributes: {}, tag: 'vyakhyana-id'),
@@ -11,7 +11,8 @@ enum XmlTag {
   heading(attributes: {Attribute.level, Attribute.lang}, tag: 'heading'),
   heading_content(attributes: {Attribute.lang}, tag: 'heading-content'),
   moola(attributes: {Attribute.id, Attribute.lang}, tag: 'moola'),
-  shloka(attributes: {Attribute.alankara, Attribute.vruttam}, tag: 'shloka'),
+  shloka(attributes: {Attribute.lang, Attribute.alankara, Attribute.vruttam}, tag: 'shloka'),
+  gadya(attributes: {Attribute.lang}, tag: 'gadya'),
   anvaya(attributes: {Attribute.lang}, tag: 'anvaya'),
   vyakhyana(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'vyakhyana'),
   p(attributes: {Attribute.lang}, tag: 'p'),
@@ -46,5 +47,5 @@ enum XmlTag {
 
 enum Attribute {
   lang, name, number, level, id, alankara, vruttam, em, ref_id, ending, linga,
-  vachana, dhatu, lakara, dhatu_meaning, gana, prayoga, padi, purusha
+  vachana, dhatu, lakara, dhatu_meaning, gana, prayoga, padi, purusha, book_type
 }

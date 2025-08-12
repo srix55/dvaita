@@ -1,7 +1,7 @@
-name: site_builder_dart
-description: A sample command-line application.
+name: generator
+description: Generates static website, pdf & odt files from xml texts
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/srix55/dvaita
 
 environment:
   sdk: ^3.7.2
@@ -11,7 +11,6 @@ dependencies:
   path: ^1.9.1
   xml: ^6.5.0
   yaml: ^3.1.3
-  # path: ^1.8.0
 
 dev_dependencies:
   lints: ^5.0.0

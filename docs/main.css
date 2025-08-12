@@ -1,9 +1,9 @@
 body {
-    margin: 15px;
+    margin: 20px;
     background-color: #FFFFFF;
     color: #1A659E;
     font-family: "Noto Sans Devanagari", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     font-variation-settings:
             "wdth" 100;
@@ -14,8 +14,15 @@ body a {
     color: #1A659E;
 }
 
+a.book-link {
+    color: #4A5759;
+    font-size: 21px;
+}
+
 footer {
     margin-top: 40px;
+    font-size: 12px;
+    color: #4A5759;
 }
 
 header h1 {
@@ -24,6 +31,7 @@ header h1 {
     font-weight: 500;
     font-size: 40px;
     text-align: center;
+    color: #4A5759;
     font-style: normal;
     font-variation-settings:
             "wdth" 100;

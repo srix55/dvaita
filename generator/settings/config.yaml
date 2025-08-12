@@ -1,0 +1,12 @@
+should-generate-html: yes
+should-generate-odt: yes
+should-generate-pdf: yes
+
+# Location of text xml files. Recursively dives into subdirectories for xml files.
+texts-dir: ../texts
+
+# Make sure it's not the present working directory. On each run, the generator
+# clears out the directories
+html-output-dir: ../docs
+odt-output-dir: output
+pdf-output-dir: output

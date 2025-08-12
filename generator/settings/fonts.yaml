@@ -32,6 +32,16 @@ font-themes:
       shloka-weight: '500'
       shloka-size: '40px'
       
+      # Gadya meta data like gadya number, etc
+      gadya-meta-font-family: 'Noto Sans Devanagari'
+      gadya-meta-size: '12px'
+      gadya-meta-weight: '300'
+
+      # Actual gadya text
+      gadya-font-family: 'Noto Sans Devanagari'
+      gadya-weight: '500'
+      gadya-size: '40px'
+      
       # Any ps points
       ps-font-family: 'Noto Sans Devanagari'
       ps-weight: '400'
@@ -71,6 +81,16 @@ font-themes:
       shloka-weight: '500'
       shloka-size: '40px'
 
+      # Gadya meta data like gadya number, etc
+      gadya-meta-font-family: 'Noto Sans Kannada'
+      gadya-meta-size: '12px'
+      gadya-meta-weight: '300'
+
+      # Actual gadya text
+      gadya-font-family: 'Noto Sans Kannada'
+      gadya-weight: '500'
+      gadya-size: '40px'
+
       # Any ps points
       ps-font-family: 'Noto Sans Kannada'
       ps-weight: '400'
@@ -109,6 +129,16 @@ font-themes:
       shloka-font-family: 'Roboto'
       shloka-weight: '500'
       shloka-size: '40px'
+
+      # Gadya meta data like gadya number, etc
+      gadya-meta-font-family: 'Roboto'
+      gadya-meta-size: '12px'
+      gadya-meta-weight: '300'
+
+      # Actual gadya text
+      gadya-font-family: 'Roboto'
+      gadya-weight: '500'
+      gadya-size: '40px'
 
       # Any ps points
       ps-font-family: 'Roboto'

@@ -5,9 +5,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/the-website/generator/site_builder_dart/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/the-website/generator/site_builder_dart/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/the-website/generator/site_builder_dart/build" />
+      <excludeFolder url="file://$MODULE_DIR$/generator/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/generator/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/generator/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

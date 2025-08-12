@@ -3,8 +3,8 @@
 
 import 'dart:io';
 
-import 'package:site_builder_dart/xml-generators/title_handler_html.dart';
-import 'package:site_builder_dart/xml_tag.dart';
+import 'package:generator/xml-generators/title_handler_html.dart';
+import 'package:generator/models/xml_tag.dart';
 import 'package:xml/xml.dart';
 
 class XmlGen {
@@ -118,6 +118,9 @@ class XmlGen {
         // TODO: Handle this case.
         throw UnimplementedError();
       case XmlTag.meaning:
+        // TODO: Handle this case.
+        throw UnimplementedError();
+      case XmlTag.gadya:
         // TODO: Handle this case.
         throw UnimplementedError();
     }

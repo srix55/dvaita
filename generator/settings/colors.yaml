@@ -13,6 +13,7 @@ color-themes:
       # General text
       text: '1A659E'
       shloka: '000000'
+      gadya: '000000'
       anvaya: '000000'
       ps: '000000'
 
@@ -33,6 +34,7 @@ color-themes:
       # General text
       text: 'FFFFFF'
       shloka: 'FFFFFF'
+      gadya: 'FFFFFF'
       anvaya: 'FFFFFF'
       ps: 'FFFFFF'
 
