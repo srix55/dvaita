@@ -1,9 +1,6 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 
-import 'dart:io';
-
 import 'package:path/path.dart' as p;
-
 import 'helper.dart';
 
 class Settings {
