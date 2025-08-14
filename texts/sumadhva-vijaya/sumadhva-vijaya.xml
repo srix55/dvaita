@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <book id="smv" book-type="kavya">
     <book-title lang="san">सुमध्वविजयः</book-title>
+    <book-author lang="san">श्री नारायणपण्डिताचार्यः</book-author>
     <vyakhyana-info>
         <vyakhyana-id>np</vyakhyana-id>
         <vyakhyana-title lang="san">भावप्रकाशिका</vyakhyana-title>
-        <vyakhyana-author lang="san">श्री नारायणपण्डिताचार्य</vyakhyana-author>
+        <vyakhyana-author lang="san">श्री नारायणपण्डिताचार्यः</vyakhyana-author>
         <vyakhyana-lang>san</vyakhyana-lang>
     </vyakhyana-info>
     <vyakhyana-info>
         <vyakhyana-id>vpt</vyakhyana-id>
         <vyakhyana-title lang="san">पदार्थदीपिकोद्बोधिका</vyakhyana-title>
-        <vyakhyana-author lang="san">श्री विश्वपतितीर्थ</vyakhyana-author>
+        <vyakhyana-author lang="san">श्री विश्वपतितीर्थः</vyakhyana-author>
         <vyakhyana-lang>san</vyakhyana-lang>
     </vyakhyana-info>
     <vyakhyana-info>
         <vyakhyana-id>csa</vyakhyana-id>
         <vyakhyana-title lang="san">मन्दोपकारिणी</vyakhyana-title>
-        <vyakhyana-author lang="san">श्री छलारीशेषाचार्य</vyakhyana-author>
+        <vyakhyana-author lang="san">श्री छलारीशेषाचार्यः</vyakhyana-author>
         <vyakhyana-lang>san</vyakhyana-lang>
     </vyakhyana-info>
     <vyakhyana-info>
         <vyakhyana-id>vkp</vyakhyana-id>
         <vyakhyana-title lang="kan">ಸುಮಧ್ವವಿಜಯ</vyakhyana-title>
-        <vyakhyana-author lang="san">डा. व्यासनकेरे प्रभञ्जनाचहार्य</vyakhyana-author>
+        <vyakhyana-author lang="san">डा. व्यासनकेरे प्रभञ्जनाचहार्यः</vyakhyana-author>
         <vyakhyana-lang>kan</vyakhyana-lang>
     </vyakhyana-info>
     <chapter number="0" name="प्रस्तावना" lang="san">

@@ -1,39 +1,434 @@
+html {
+  /* Smooth transition for colors, backgrounds, borders */
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body, header, footer, main, a, button {
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+} 
+
+/* Disable transitions until page is fully initialized */
+.no-transitions * {
+  transition: none !important;
+}
+    
+:root {
+  /* theme1:Purple:light */
+  --theme1-light-background: #FFFFFF;
+  --theme1-light-meta-heading: #000000;
+  --theme1-light-inline-word: #000000;
+  --theme1-light-text: #1A659E;
+  --theme1-light-shloka: #000000;
+  --theme1-light-gadya: #000000;
+  --theme1-light-anvaya: #000000;
+  --theme1-light-ps: #000000;
+  --theme1-light-inline-meaning: #000000;
+  --theme1-light-meaning-word: #000000;
+  --theme1-light-divider: #000000;
+
+  /* theme1:Purple:dark */
+  --theme1-dark-background: #000000;
+  --theme1-dark-meta-heading: #FFFFFF;
+  --theme1-dark-inline-word: #FFFFFF;
+  --theme1-dark-text: #FFFFFF;
+  --theme1-dark-shloka: #FFFFFF;
+  --theme1-dark-gadya: #FFFFFF;
+  --theme1-dark-anvaya: #FFFFFF;
+  --theme1-dark-ps: #FFFFFF;
+  --theme1-dark-inline-meaning: #FFFFFF;
+  --theme1-dark-meaning-word: #FFFFFF;
+  --theme1-dark-divider: #FFFFFF;
+  /* theme2:Brown:light */
+  --theme2-light-background: #f9f8f7;
+  --theme2-light-meta-heading: #0e0d0b;
+  --theme2-light-inline-word: #0e0d0b;
+  --theme2-light-text: #0e0d0b;
+  --theme2-light-shloka: #0e0d0b;
+  --theme2-light-gadya: #0e0d0b;
+  --theme2-light-anvaya: #0e0d0b;
+  --theme2-light-ps: #0e0d0b;
+  --theme2-light-inline-meaning: #0e0d0b;
+  --theme2-light-meaning-word: #0e0d0b;
+  --theme2-light-divider: #0e0d0b;
+
+  /* theme2:Brown:dark */
+  --theme2-dark-background: #090807;
+  --theme2-dark-meta-heading: #f4f3f1;
+  --theme2-dark-inline-word: #f4f3f1;
+  --theme2-dark-text: #f4f3f1;
+  --theme2-dark-shloka: #f4f3f1;
+  --theme2-dark-gadya: #f4f3f1;
+  --theme2-dark-anvaya: #f4f3f1;
+  --theme2-dark-ps: #f4f3f1;
+  --theme2-dark-inline-meaning: #f4f3f1;
+  --theme2-dark-meaning-word: #f4f3f1;
+  --theme2-dark-divider: #f4f3f1;
+}
+
+html[data-theme="theme1"][data-mode="light"] {
+  --background: var(--theme1-light-background);
+  --meta-heading: var(--theme1-light-meta-heading);
+  --inline-word: var(--theme1-light-inline-word);
+  --text: var(--theme1-light-text);
+  --shloka: var(--theme1-light-shloka);
+  --gadya: var(--theme1-light-gadya);
+  --anvaya: var(--theme1-light-anvaya);
+  --ps: var(--theme1-light-ps);
+  --inline-meaning: var(--theme1-light-inline-meaning);
+  --meaning-word: var(--theme1-light-meaning-word);
+  --divider: var(--theme1-light-divider);
+}
+html[data-theme="theme1"][data-mode="dark"] {
+  --background: var(--theme1-dark-background);
+  --meta-heading: var(--theme1-dark-meta-heading);
+  --inline-word: var(--theme1-dark-inline-word);
+  --text: var(--theme1-dark-text);
+  --shloka: var(--theme1-dark-shloka);
+  --gadya: var(--theme1-dark-gadya);
+  --anvaya: var(--theme1-dark-anvaya);
+  --ps: var(--theme1-dark-ps);
+  --inline-meaning: var(--theme1-dark-inline-meaning);
+  --meaning-word: var(--theme1-dark-meaning-word);
+  --divider: var(--theme1-dark-divider);
+}
+html[data-theme="theme2"][data-mode="light"] {
+  --background: var(--theme2-light-background);
+  --meta-heading: var(--theme2-light-meta-heading);
+  --inline-word: var(--theme2-light-inline-word);
+  --text: var(--theme2-light-text);
+  --shloka: var(--theme2-light-shloka);
+  --gadya: var(--theme2-light-gadya);
+  --anvaya: var(--theme2-light-anvaya);
+  --ps: var(--theme2-light-ps);
+  --inline-meaning: var(--theme2-light-inline-meaning);
+  --meaning-word: var(--theme2-light-meaning-word);
+  --divider: var(--theme2-light-divider);
+}
+html[data-theme="theme2"][data-mode="dark"] {
+  --background: var(--theme2-dark-background);
+  --meta-heading: var(--theme2-dark-meta-heading);
+  --inline-word: var(--theme2-dark-inline-word);
+  --text: var(--theme2-dark-text);
+  --shloka: var(--theme2-dark-shloka);
+  --gadya: var(--theme2-dark-gadya);
+  --anvaya: var(--theme2-dark-anvaya);
+  --ps: var(--theme2-dark-ps);
+  --inline-meaning: var(--theme2-dark-inline-meaning);
+  --meaning-word: var(--theme2-dark-meaning-word);
+  --divider: var(--theme2-dark-divider);
+}
+
+    
 body {
     margin: 20px;
-    background-color: #FFFFFF;
-    color: #1A659E;
+    background-color: var(--background);
+    color: var(--text);
     font-family: "Noto Sans Devanagari", sans-serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 1.5;
     font-variation-settings:
             "wdth" 100;
 }
 
 body a {
     text-decoration: none;
-    color: #1A659E;
+    color: var(--text);
+}
+
+.theme-button {
+  cursor: pointer;
+  user-select: none;
+  margin-left: 15px;
+  color: var(--text);
+  fill: var(--text);
 }
 
 a.book-link {
-    color: #4A5759;
+    color: var(--text);
     font-size: 21px;
 }
 
-footer {
-    margin-top: 40px;
-    font-size: 12px;
-    color: #4A5759;
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-header h1 {
+header a {
+    font-size: 16px;
+    color: var(--text);
+    margin-left: auto;
+    display: inline-flex; /* makes icon+text align properly */
+    align-items: center;  /* vertical centering */    
+}
+
+footer {
+    margin-top: 60px;
+    font-size: 12px;
+    color: var(--text);
+}
+
+.chapter-links {
+    border: 0.1px solid var(--text);
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.chapter-title {
+    margin-bottom: 25px;
+}
+
+.anvaya {
+    color: var(--anvaya);
+}
+
+.landing-title {
     font-family: "Noto Sans Devanagari", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-size: 40px;
     text-align: center;
-    color: #4A5759;
+    color: var(--text);
     font-style: normal;
     font-variation-settings:
             "wdth" 100;
-}    
+}
+
+/* Font definitions */
+.san {
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.san-chapter-title {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--text);
+}
+
+.san-secondary-heading {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--text);
+}
+
+.san-meta-heading {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--meta-heading);
+}
+
+.san-text {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.san-shloka-meta {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--shloka);
+}
+
+.san-shloka {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--shloka);
+}
+
+.san-gadya-meta {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--gadya);
+}
+
+.san-gadya {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--gadya);
+}
+
+.san-ps {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ps);
+}
+
+.san-inline {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--inline-meaning);
+  vertical-align: super;
+}
+
+.kan {
+  font-family: "Noto Sans Kannada", sans-serif;
+}
+
+.kan-chapter-title {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--text);
+}
+
+.kan-secondary-heading {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--text);
+}
+
+.kan-meta-heading {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--meta-heading);
+}
+
+.kan-text {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.kan-shloka-meta {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--shloka);
+}
+
+.kan-shloka {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--shloka);
+}
+
+.kan-gadya-meta {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--gadya);
+}
+
+.kan-gadya {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--gadya);
+}
+
+.kan-ps {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ps);
+}
+
+.kan-inline {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--inline-meaning);
+  vertical-align: super;
+}
+
+.eng {
+  font-family: "Roboto", sans-serif;
+}
+
+.eng-chapter-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--text);
+}
+
+.eng-secondary-heading {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--text);
+}
+
+.eng-meta-heading {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--meta-heading);
+}
+
+.eng-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.eng-shloka-meta {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--shloka);
+}
+
+.eng-shloka {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--shloka);
+}
+
+.eng-gadya-meta {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--gadya);
+}
+
+.eng-gadya {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--gadya);
+}
+
+.eng-ps {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ps);
+}
+
+.eng-inline {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--inline-meaning);
+  vertical-align: super;
+}
+
+
     

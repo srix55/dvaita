@@ -13,15 +13,16 @@ import 'package:path/path.dart' as p;
 import 'package:xml/xml.dart';
 
 import 'head_gen.dart';
+import 'header_gen.dart';
 
 class LandingPageGenerator {
   void generate() {
-    String headSection = HeadGen(folderLevel: 0, cssFileName: Constants.cssFileName, fontUrl: Settings.font.getGoogleFontFetchURL(), pageTitle: Constants.siteTitle.string).generate();
+    String headSection = HeadGen(folderLevel: 0, cssFileName: Constants.cssFileName, jsFileName: Constants.jsFileName, fontUrl: Settings.font.getGoogleFontFetchURL(), pageTitle: Constants.siteTitle.string).generate();
     Map<String, StringWithLang> bookIdNameMap = _getBooks();
     String bookLinks = '';
     bool first = true;
     for (String key in bookIdNameMap.keys) {
-      bookLinks = '$bookLinks${first ? '' : '\n'}<a class="book-link" href="$key/$key.html">${bookIdNameMap[key]!.string}</a>';
+      bookLinks = '$bookLinks${first ? '' : '\n'}<a class="book-link" href="texts/$key/$key.html">${bookIdNameMap[key]!.string}</a>';
       first = false;
     }
 
@@ -30,7 +31,8 @@ class LandingPageGenerator {
 <html lang="sa">
 $headSection
 <body>
-  <header><h1>द्वैतग्रन्थाः</h1></header>
+  ${HeaderGen(folderLevel: 0).generate()}
+  <div class="landing-title">द्वैतग्रन्थाः</div>
 
   <main class="content">
     $bookLinks

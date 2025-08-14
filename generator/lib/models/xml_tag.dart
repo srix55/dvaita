@@ -1,6 +1,7 @@
 enum XmlTag {
   book(attributes: {Attribute.id, Attribute.book_type}, tag: 'book'),
   book_title(attributes: {Attribute.lang}, tag: 'book-title'),
+  book_author(attributes: {Attribute.lang}, tag: 'book-author'),
   vyakhyana_info(attributes: {}, tag: 'vyakhyana-info'),
   vyakhyana_id(attributes: {}, tag: 'vyakhyana-id'),
   vyakhyana_title(attributes: {Attribute.lang}, tag: 'vyakhyana-title'),
@@ -46,6 +47,14 @@ enum XmlTag {
 }
 
 enum Attribute {
-  lang, name, number, level, id, alankara, vruttam, em, ref_id, ending, linga,
-  vachana, dhatu, lakara, dhatu_meaning, gana, prayoga, padi, purusha, book_type
+  lang(tag: 'lang'), name(tag: 'name'), number(tag: 'number'), level(tag: 'level'),
+  id(tag: 'id'), alankara(tag: 'alankara'), vruttam(tag: 'vruttam'), em(tag: 'em'),
+  ref_id(tag: 'ref-id'), ending(tag: 'ending'), linga(tag: 'linga'), vachana(tag: 'vachana'),
+  dhatu(tag: 'dhatu'), lakara(tag: 'lakara'), dhatu_meaning(tag: 'dhatu-meaning'),
+  gana(tag: 'gana'), prayoga(tag: 'prayoga'), padi(tag: 'padi'), purusha(tag: 'purusha'),
+  book_type(tag: 'book-type');
+
+  final String tag;
+
+  const Attribute({required this.tag});
 }

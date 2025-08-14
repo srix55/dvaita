@@ -123,6 +123,9 @@ class XmlGen {
       case XmlTag.gadya:
         // TODO: Handle this case.
         throw UnimplementedError();
+      case XmlTag.book_author:
+        // TODO: Handle this case.
+        throw UnimplementedError();
     }
     print('name-local: ${element.localName}, attributes: ${element.attributes}');
     for (XmlElement e in element.childElements)

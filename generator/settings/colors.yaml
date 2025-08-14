@@ -45,5 +45,51 @@ color-themes:
       meaning-word: 'FFFFFF'
       divider: 'FFFFFF'
 
+  theme2:
+    name: Brown
+    light:
+      background: 'f9f8f7'
+
+      # Headings like anvaya, vyakhyana, shabdartha, etc
+      meta-heading: '0e0d0b'
+
+      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
+      inline-word: '0e0d0b'
+
+      # General text
+      text: '0e0d0b'
+      shloka: '0e0d0b'
+      gadya: '0e0d0b'
+      anvaya: '0e0d0b'
+      ps: '0e0d0b'
+
+      # The superscript/subscript text inline
+      inline-meaning: '0e0d0b'
+
+      # The words in the meanings section
+      meaning-word: '0e0d0b'
+      divider: '0e0d0b'
+    dark:
+      background: '090807'
+      # Headings like anvaya, vyakhyana, shabdartha, etc
+      meta-heading: 'f4f3f1'
+
+      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
+      inline-word: 'f4f3f1'
+
+      # General text
+      text: 'f4f3f1'
+      shloka: 'f4f3f1'
+      gadya: 'f4f3f1'
+      anvaya: 'f4f3f1'
+      ps: 'f4f3f1'
+
+      # The superscript/subscript text inline
+      inline-meaning: 'f4f3f1'
+
+      # The words in the meanings section
+      meaning-word: 'f4f3f1'
+      divider: 'f4f3f1'
+
 # Used in the generation of website, pdf & odt
 selected-theme: theme1

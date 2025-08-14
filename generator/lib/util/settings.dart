@@ -138,7 +138,7 @@ class Settings {
           metaHeading: dark['meta-heading'], text: dark['text'], shloka: dark['shloka'],
           anvaya: dark['anvaya'], ps: dark['ps'], inlineMeaning: dark['inline-meaning'],
           divider: dark['divider'], gadya: dark['gadya']);
-      ColorTheme colorTheme = ColorTheme(name: themeName, light: lite, dark: dar);
+      ColorTheme colorTheme = ColorTheme(id: themeId, name: themeName, light: lite, dark: dar);
       allColorThemes.add(colorTheme);
       if (themeId == selectedColorThemeId)
         color = colorTheme;
@@ -316,14 +316,15 @@ class Fonts {
 
 class ColorTheme {
   final String name;
+  final String id; // This is the one that's defined in yaml as 'theme1', 'theme2' etc.. not the name attribute
   final Colors light;
   final Colors dark;
 
-  ColorTheme({required this.name, required this.light, required this.dark});
+  ColorTheme({required this.name, required this.light, required this.dark, required this.id});
 
   @override
   String toString() {
-    return 'ColorTheme{name: $name, light: $light, dark: $dark}';
+    return 'ColorTheme{id: $id, name: $name, light: $light, dark: $dark}';
   }
 }
 

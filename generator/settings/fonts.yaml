@@ -19,7 +19,7 @@ font-themes:
       
       # General content
       text-font-family: 'Noto Sans Devanagari'
-      text-size: '21px'
+      text-size: '18px'
       text-weight: '400'
       
       # Shloka meta data like shloka number, etc
@@ -68,7 +68,7 @@ font-themes:
 
       # General content
       text-font-family: 'Noto Sans Kannada'
-      text-size: '21px'
+      text-size: '16px'
       text-weight: '400'
 
       # Shloka meta data like shloka number, etc

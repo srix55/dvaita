@@ -3,6 +3,9 @@
   - Attributes:-
     - id: Id of the book
     - book-type: kavya/gadya
+- book-author: Author of the book
+  - Attributes:-
+    - lang: kan/eng/san, 3 letter iso standard for language
 - book-title: Title of the book
   - Attributes:-
     - lang: kan/eng/san, 3 letter iso standard for language

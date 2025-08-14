@@ -9,7 +9,7 @@ import 'package:path/path.dart' as p;
 main(List<String> args) async {
   // See if settings folder is specified in args
   String settingsFolder;
-  if (args != null && args.isNotEmpty)
+  if (args.isNotEmpty)
     settingsFolder = args.first;
   else
     settingsFolder = p.join('settings');
@@ -34,6 +34,8 @@ void _refreshDirectories() {
     var dir = Directory(Settings.config.htmlOutputDirectory);
     if (dir.existsSync()) dir.deleteSync(recursive: true);
     dir.createSync(recursive: true);
+    var textsDir = Directory(p.join(Settings.config.htmlOutputDirectory, 'texts'));
+    textsDir.createSync();
   }
   
   if (Settings.config.shouldGeneratePdf) {
