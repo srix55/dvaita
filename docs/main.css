@@ -176,7 +176,8 @@ footer {
     color: var(--text);
 }
 
-.chapter-links {
+.chapter-links,
+.shloka-links {
     border: 0.1px solid var(--text);
     border-radius: 5px;
     padding: 15px;

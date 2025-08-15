@@ -37,7 +37,7 @@ class BookIndexXmlHandler {
   }
 
   void _recursiveHandler(XmlElement xml) {
-
+    // TBD
   }
 
   List<BookIndexChapterInfo> _getChapters() {
@@ -59,7 +59,7 @@ class BookIndexXmlHandler {
     for (int i=0; i<chapters.length; i++) {
       BookIndexChapterInfo info = chapters[i];
       bool first = i==0;
-      chapterLinks = '$chapterLinks<a href="${info.chapterId}/${info.chapterId}.html" ${first ? '' : 'style="margin-left: 2em;" class="${info.chapter.lang}"'}>${info.chapter.string}</a>';
+      chapterLinks = '$chapterLinks<a href="c${info.chapterId}/c${info.chapterId}.html" ${first ? '' : 'style="margin-left: 2em;" class="${info.chapter.lang}"'}>${info.chapter.string}</a>';
     }
     return chapterLinks;
   }

@@ -34,7 +34,7 @@
 - moola: The original text
   - Attributes:-
     - id: Id of the moola
-    - lang: kan/eng/san, 3 letter iso standard for language
+    - lang: kan/eng/san, 3 letter iso standard for language, off moola-id
   - gadya: Moola text in gadya
     - Attributes:-
       - lang: kan/eng/san, 3 letter iso standard for language
