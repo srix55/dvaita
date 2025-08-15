@@ -15,6 +15,8 @@ class JsGen {
   String _getText() {
     String themesList = _getThemesList();
     return '''
+// ${Constants.autoGenComment}
+    
 // List of themes you want to cycle through
 const themes = $themesList;
 

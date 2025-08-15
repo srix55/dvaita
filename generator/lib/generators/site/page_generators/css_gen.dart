@@ -17,6 +17,8 @@ class CssGen {
     String themeDefinitions = _getThemeDefinitions();
     String fontDefinitions = _getFontDefinitions();
     return '''
+/* ${Constants.autoGenComment} */    
+    
 html {
   /* Smooth transition for colors, backgrounds, borders */
   transition: 

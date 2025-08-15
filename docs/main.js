@@ -1,3 +1,5 @@
+// ++++++++ AUTO GENERATED FILE ++++++++
+    
 // List of themes you want to cycle through
 const themes = ['theme1', 'theme2'];
 

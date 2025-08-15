@@ -27,6 +27,7 @@ class LandingPageGenerator {
     }
 
     String htmlFinal = '''
+<!-- ${Constants.autoGenComment} -->    
 <!doctype html>
 <html lang="sa">
 $headSection
