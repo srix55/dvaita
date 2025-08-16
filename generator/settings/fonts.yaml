@@ -10,27 +10,22 @@ font-themes:
       # Sections in the chapter, with heading & content
       secondary-heading-font-family: 'Noto Sans Devanagari'
       secondary-heading-weight: '500'
-      secondary-heading-size: '30px'
+      secondary-heading-size: '25px'
       
       # Meta headings like vyakhyana, grammar, anvaya, etc
       meta-heading-font-family: 'Noto Sans Devanagari'
-      meta-heading-weight: '500'
+      meta-heading-weight: '600'
       meta-heading-size: '14px'
       
       # General content
       text-font-family: 'Noto Sans Devanagari'
-      text-size: '18px'
+      text-size: '21px'
       text-weight: '400'
-      
-      # Shloka meta data like shloka number, etc
-      shloka-meta-font-family: 'Noto Sans Devanagari'
-      shloka-meta-size: '12px'
-      shloka-meta-weight: '300'
       
       # Actual shloka text
       shloka-font-family: 'Noto Sans Devanagari'
       shloka-weight: '500'
-      shloka-size: '40px'
+      shloka-size: '30px'
       
       # Gadya meta data like gadya number, etc
       gadya-meta-font-family: 'Noto Sans Devanagari'
@@ -49,8 +44,8 @@ font-themes:
       
       # inline-meanings (superscripts/subscripts) for text segments
       inline-font-family: 'Noto Sans Devanagari'
-      inline-weight: '400'
-      inline-size: '12px'
+      inline-weight: '500'
+      inline-size: '10px'
     kan:
       chapter-title-font-family: 'Noto Sans Kannada'
       chapter-title-weight: '500'
@@ -59,27 +54,22 @@ font-themes:
       # Sections in the chapter, with heading & content
       secondary-heading-font-family: 'Noto Sans Kannada'
       secondary-heading-weight: '500'
-      secondary-heading-size: '30px'
+      secondary-heading-size: '24px'
 
       # Meta headings like vyakhyana, grammar, anvaya, etc
       meta-heading-font-family: 'Noto Sans Kannada'
       meta-heading-weight: '500'
-      meta-heading-size: '14px'
+      meta-heading-size: '21px'
 
       # General content
       text-font-family: 'Noto Sans Kannada'
-      text-size: '16px'
+      text-size: '20px'
       text-weight: '400'
-
-      # Shloka meta data like shloka number, etc
-      shloka-meta-font-family: 'Noto Sans Kannada'
-      shloka-meta-size: '12px'
-      shloka-meta-weight: '300'
 
       # Actual shloka text
       shloka-font-family: 'Noto Sans Kannada'
       shloka-weight: '500'
-      shloka-size: '40px'
+      shloka-size: '30px'
 
       # Gadya meta data like gadya number, etc
       gadya-meta-font-family: 'Noto Sans Kannada'
@@ -98,8 +88,8 @@ font-themes:
 
       # inline-meanings (superscripts/subscripts) for text segments
       inline-font-family: 'Noto Sans Kannada'
-      inline-weight: '400'
-      inline-size: '12px'
+      inline-weight: '500'
+      inline-size: '10px'
     eng:
       chapter-title-font-family: 'Roboto'
       chapter-title-weight: '500'
@@ -108,27 +98,22 @@ font-themes:
       # Sections in the chapter, with heading & content
       secondary-heading-font-family: 'Roboto'
       secondary-heading-weight: '500'
-      secondary-heading-size: '30px'
+      secondary-heading-size: '25px'
 
       # Meta headings like vyakhyana, grammar, anvaya, etc
       meta-heading-font-family: 'Roboto'
       meta-heading-weight: '500'
-      meta-heading-size: '14px'
+      meta-heading-size: '21px'
 
       # General content
       text-font-family: 'Roboto'
       text-size: '21px'
       text-weight: '400'
 
-      # Shloka meta data like shloka number, etc
-      shloka-meta-font-family: 'Roboto'
-      shloka-meta-size: '12px'
-      shloka-meta-weight: '300'
-
       # Actual shloka text
       shloka-font-family: 'Roboto'
       shloka-weight: '500'
-      shloka-size: '40px'
+      shloka-size: '30px'
 
       # Gadya meta data like gadya number, etc
       gadya-meta-font-family: 'Roboto'
@@ -147,8 +132,8 @@ font-themes:
 
       # inline-meanings (superscripts/subscripts) for text segments
       inline-font-family: 'Roboto'
-      inline-weight: '400'
-      inline-size: '12px'
+      inline-weight: '500'
+      inline-size: '10px'
 
 # Used in the generation of website, pdf & odt
 selected-theme: theme1

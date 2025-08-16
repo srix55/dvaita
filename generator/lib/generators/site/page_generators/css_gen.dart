@@ -47,9 +47,14 @@ body {
     font-family: "${sanFonts.textFontFamily}", sans-serif;
     font-weight: ${sanFonts.textWeight};
     font-style: normal;
-    line-height: 1.5;
+    line-height: ${Settings.spacing.lineHeight};
     font-variation-settings:
             "wdth" 100;
+}
+
+p {
+    margin-top: ${Settings.spacing.paraMarginTopBottom};
+    margin-bottom: ${Settings.spacing.paraMarginTopBottom};
 }
 
 body a {
@@ -90,23 +95,60 @@ footer {
     color: var(--text);
 }
 
+hr {
+    display: block;
+    margin-top: ${Settings.spacing.dividerMarginTop};
+    margin-bottom: ${Settings.spacing.dividerMarginBottom};
+    border: none;
+    border-top: 1px solid var(--divider);
+}
+
+.next,
+.previous {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 15px;
+    color: var(--meta-heading);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 .chapter-links,
-.shloka-links {
-    border: 0.1px solid var(--text);
+.moola-links {
+    border: 1px solid var(--divider);
     border-radius: 5px;
     padding: 15px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-size: 14px;
     color: var(--text);
 }
 
 .chapter-title {
     margin-bottom: 25px;
+    color: var(--text);
+}
+
+.shloka {
+    text-align: center;
+    color: var(--shloka);
+    margin-bottom: 10px;
 }
 
 .anvaya {
     color: var(--anvaya);
+    line-height: ${Settings.spacing.lineHeightToContainInline};
+}
+
+.meta-heading {
+    margin-bottom: ${Settings.spacing.metaHeadingMarginBottom};
+    margin-top: ${Settings.spacing.metaHeadingMarginBottom};
+    color: var(--meta-heading);
+}
+
+/* This is to accommodate inline-superscript text */
+.extra-line-height {
+    line-height: ${Settings.spacing.lineHeightToContainInline};
 }
 
 .landing-title {
@@ -119,6 +161,20 @@ footer {
     font-style: normal;
     font-variation-settings:
             "wdth" 100;
+}
+
+.inline {
+    vertical-align: baseline;
+    position: absolute;
+    top: ${Settings.spacing.inlineTextOffset};
+    left: -30px;
+    width: 150px;
+    color: var(--inline-meaning);
+}
+
+.dotted-underline {
+    border-bottom: 1px dashed var(--inline-meaning);
+    text-decoration: none; /* prevent default underline */
 }
 
 /* Font definitions */
@@ -138,7 +194,6 @@ $fontDefinitions
       buff.writeln('  font-family: "${f.chapterTitleFontFamily}", sans-serif;');
       buff.writeln('  font-weight: ${f.chapterTitleWeight};');
       buff.writeln('  font-size: ${f.chapterTitleSize};');
-      buff.writeln('  color: var(--text);');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-secondary-heading {');
@@ -152,57 +207,42 @@ $fontDefinitions
       buff.writeln('  font-family: "${f.metaHeadingFontFamily}", sans-serif;');
       buff.writeln('  font-weight: ${f.metaHeadingWeight};');
       buff.writeln('  font-size: ${f.metaHeadingSize};');
-      buff.writeln('  color: var(--meta-heading);');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-text {');
       buff.writeln('  font-family: "${f.textFontFamily}", sans-serif;');
       buff.writeln('  font-size: ${f.textSize};');
       buff.writeln('  font-weight: ${f.textWeight};');
-      buff.writeln('  color: var(--text);');
-      buff.writeln('}');
-      buff.writeln('');
-      buff.writeln('.$lang-shloka-meta {');
-      buff.writeln('  font-family: "${f.shlokaMetaFontFamily}", sans-serif;');
-      buff.writeln('  font-size: ${f.shlokaMetaSize};');
-      buff.writeln('  font-weight: ${f.shlokaMetaWeight};');
-      buff.writeln('  color: var(--shloka);');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-shloka {');
       buff.writeln('  font-family: "${f.shlokaFontFamily}", sans-serif;');
       buff.writeln('  font-size: ${f.shlokaSize};');
       buff.writeln('  font-weight: ${f.shlokaWeight};');
-      buff.writeln('  color: var(--shloka);');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-gadya-meta {');
       buff.writeln('  font-family: "${f.gadyaMetaFontFamily}", sans-serif;');
       buff.writeln('  font-size: ${f.gadyaMetaSize};');
       buff.writeln('  font-weight: ${f.gadyaMetaWeight};');
-      buff.writeln('  color: var(--gadya);');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-gadya {');
       buff.writeln('  font-family: "${f.gadyaFontFamily}", sans-serif;');
       buff.writeln('  font-size: ${f.gadyaSize};');
       buff.writeln('  font-weight: ${f.gadyaWeight};');
-      buff.writeln('  color: var(--gadya);');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-ps {');
       buff.writeln('  font-family: "${f.psFontFamily}", sans-serif;');
       buff.writeln('  font-size: ${f.psSize};');
       buff.writeln('  font-weight: ${f.psWeight};');
-      buff.writeln('  color: var(--ps);');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-inline {');
       buff.writeln('  font-family: "${f.inlineFontFamily}", sans-serif;');
       buff.writeln('  font-size: ${f.inlineSize};');
       buff.writeln('  font-weight: ${f.inlineWeight};');
-      buff.writeln('  color: var(--inline-meaning);');
-      buff.writeln('  vertical-align: super;');
       buff.writeln('}');
       buff.writeln('');
     }
@@ -215,6 +255,7 @@ $fontDefinitions
     for (ColorTheme theme in Settings.allColorThemes) {
       buff.writeln('  /* ${theme.id}:${theme.name}:light */');
       buff.writeln('  --${theme.id}-light-background: #${theme.light.background};');
+      buff.writeln('  --${theme.id}-light-accent: #${theme.light.accent};');
       buff.writeln('  --${theme.id}-light-meta-heading: #${theme.light.metaHeading};');
       buff.writeln('  --${theme.id}-light-inline-word: #${theme.light.inlineWord};');
       buff.writeln('  --${theme.id}-light-text: #${theme.light.text};');
@@ -228,6 +269,7 @@ $fontDefinitions
       buff.writeln('');
       buff.writeln('  /* ${theme.id}:${theme.name}:dark */');
       buff.writeln('  --${theme.id}-dark-background: #${theme.dark.background};');
+      buff.writeln('  --${theme.id}-dark-accent: #${theme.dark.accent};');
       buff.writeln('  --${theme.id}-dark-meta-heading: #${theme.dark.metaHeading};');
       buff.writeln('  --${theme.id}-dark-inline-word: #${theme.dark.inlineWord};');
       buff.writeln('  --${theme.id}-dark-text: #${theme.dark.text};');
@@ -244,6 +286,7 @@ $fontDefinitions
     for (ColorTheme theme in Settings.allColorThemes) {
       buff.writeln('html[data-theme="${theme.id}"][data-mode="light"] {');
       buff.writeln('  --background: var(--${theme.id}-light-background);');
+      buff.writeln('  --accent: var(--${theme.id}-light-accent);');
       buff.writeln('  --meta-heading: var(--${theme.id}-light-meta-heading);');
       buff.writeln('  --inline-word: var(--${theme.id}-light-inline-word);');
       buff.writeln('  --text: var(--${theme.id}-light-text);');
@@ -258,6 +301,7 @@ $fontDefinitions
       buff.write('');
       buff.writeln('html[data-theme="${theme.id}"][data-mode="dark"] {');
       buff.writeln('  --background: var(--${theme.id}-dark-background);');
+      buff.writeln('  --accent: var(--${theme.id}-dark-accent);');
       buff.writeln('  --meta-heading: var(--${theme.id}-dark-meta-heading);');
       buff.writeln('  --inline-word: var(--${theme.id}-dark-inline-word);');
       buff.writeln('  --text: var(--${theme.id}-dark-text);');

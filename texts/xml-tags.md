@@ -43,6 +43,7 @@
       - lang: kan/eng/san, 3 letter iso standard for language
       - alankara: Alankara of the shloka
       - vruttam: vrutta of the shloka
+    - shloka-pada: Pada of the shloka
   - anvaya: Shloka anvaya
     - Attributes:-
       - lang: kan/eng/san, 3 letter iso standard for language
@@ -57,11 +58,12 @@
   - Attributes:-
     - em: Emphasis / bold
     - lang: kan/eng/san, 3 letter iso standard for language
-    - id: Id associated with a segment for PS, meaning, grammar, etc
-- quick-meaning: Quick meanings of a segment. Helpful in annotating text with the meaning.
-  - Attributes:-
-    - ref-id: Id in reference to a marked segment
-    - lang: kan/eng/san, 3 letter iso standard for language
+    - id: Id associated with a segment for PS, meaning, grammar, etc. When used to denote meanings/grammar, make sure that the id is unique throughout the book. One way to ensure this is to use 'chapterNumber-shlokaNum-digit' as the id.
+    - qm: A '_' separated list of quick meanings to this segment of text that's likely displayed inline as a superscript. Default language is Sanskrit. To specify other languages, use this syntax: `qm="kan#ಆರೋಗ್ಯ_eng#health,wellbeing_san#स्वास्थ्यम्"`
+    - feat: Features. Contains comma separated list of features. Example: `feat="m,g"`. The features are:
+      - m: Meaning. Engine generates a clickable link to the word in the meanings section
+      - g: Grammar. Engine generates a clickable link to the word in the grammar section
+      - ps: Is linked to a point in the post-section
 - ps: post section
 - ps-ref: reference to a post section
   - Attributes:-
@@ -81,26 +83,26 @@
     - Attributes:-
       - ref-id: Id in reference to a marked segment
       - lang: kan/eng/san, 3 letter iso standard for language
-- shabda-roopa:
-  - Attributes
-    - ending: अ, इ, etc
-    - linga: पु, स्त्री, न
-    - name: शब्द name. example: राम
-  - vibhakti
-    - id: प्र, द्वि, तृ, च, प, ष, स, सं
+  - shabda-roopa:
+    - Attributes
+      - ending: अ, इ, etc
+      - linga: पु, स्त्री, न
+      - name: शब्द name. example: राम
+    - vibhakti
+      - id: प्र, द्वि, तृ, च, प, ष, स, सं
+        - vachana:
+          - Attributes:-
+            - id: एक, द्वि, बहु
+  - kriya-roopa:
+    - Attributes:-
+      - dhatu
+      - lakara
+      - dhatu-meaning
+      - gana
+      - prayoga: kartari/karmani
+      - padi: atmane/parasmai/ubhaya
+    - purusha
+      - id: प्र, म, उ
       - vachana:
         - Attributes:-
           - id: एक, द्वि, बहु
-- kriya-roopa:
-  - Attributes:-
-    - dhatu
-    - lakara
-    - dhatu-meaning
-    - gana
-    - prayoga: kartari/karmani
-    - padi: atmane/parasmai/ubhaya
-  - purusha
-    - id: प्र, म, उ
-    - vachana:
-      - Attributes:-
-        - id: एक, द्वि, बहु

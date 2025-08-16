@@ -1,11 +1,18 @@
 spacing-themes:
   theme1:
     name: default
-    page-margin: '20px'
-    para-margin-top-bottom: '10px'
+
+    # Useful for tweaking inline-meaning display
+    line-height: '1.5' # Overall line height
+    line-height-for-superscript-containing-text: '2.25'
+    inline-text-offset: '-38px'
+
+    page-margin: '25px'
+    para-margin-top-bottom: '15px'
     chapter-title-margin-bottom: '20px'
-    divider-margin-top-bottom: '10px'
-    meta-heading-to-content: '20px'
+    divider-margin-top: '25px'
+    divider-margin-bottom: '40px'
+    meta-heading-margin-bottom: '5px'
     shloka-meta-to-shloka: '10px'
 
 # Used in the generation of website, pdf & odt

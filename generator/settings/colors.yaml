@@ -1,95 +1,105 @@
 color-themes:
   theme1:
-    name: Purple
+    # Warm Neutral - https://coolors.co/palette/582f0e-7f4f24-936639-a68a64-b6ad90-c2c5aa-a4ac86-656d4a-414833-333d29
+    name: Warm Neutral
     light:
       background: 'FFFFFF'
+      accent: '343a4080'
 
       # Headings like anvaya, vyakhyana, shabdartha, etc
-      meta-heading: '000000'
+      meta-heading: '778da9'
 
       # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
-      inline-word: '000000'
+      inline-word: '212529'
 
       # General text
-      text: '1A659E'
-      shloka: '000000'
-      gadya: '000000'
-      anvaya: '000000'
-      ps: '000000'
+      text: '343a40'
+      shloka: '343a40'
+      gadya: '343a40'
+      anvaya: '343a40'
+      ps: '343a40'
 
       # The superscript/subscript text inline
-      inline-meaning: '000000'
-
-      # The words in the meanings section
-      meaning-word: '000000'
-      divider: '000000'
-    dark:
-      background: '000000'
-      # Headings like anvaya, vyakhyana, shabdartha, etc
-      meta-heading: 'FFFFFF'
-
-      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
-      inline-word: 'FFFFFF'
-
-      # General text
-      text: 'FFFFFF'
-      shloka: 'FFFFFF'
-      gadya: 'FFFFFF'
-      anvaya: 'FFFFFF'
-      ps: 'FFFFFF'
-
-      # The superscript/subscript text inline
-      inline-meaning: 'FFFFFF'
-
-      # The words in the meanings section
-      meaning-word: 'FFFFFF'
-      divider: 'FFFFFF'
-
-  theme2:
-    name: Brown
-    light:
-      background: 'f9f8f7'
-
-      # Headings like anvaya, vyakhyana, shabdartha, etc
-      meta-heading: '0e0d0b'
-
-      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
-      inline-word: '0e0d0b'
-
-      # General text
-      text: '0e0d0b'
-      shloka: '0e0d0b'
-      gadya: '0e0d0b'
-      anvaya: '0e0d0b'
-      ps: '0e0d0b'
-
-      # The superscript/subscript text inline
-      inline-meaning: '0e0d0b'
+      inline-meaning: '343a4080'
 
       # The words in the meanings section
       meaning-word: '0e0d0b'
-      divider: '0e0d0b'
+      divider: '778da926'
     dark:
       background: '090807'
+      accent: 'FF0000'
+
       # Headings like anvaya, vyakhyana, shabdartha, etc
-      meta-heading: 'f4f3f1'
+      meta-heading: '68553c'
 
       # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
       inline-word: 'f4f3f1'
 
       # General text
-      text: 'f4f3f1'
-      shloka: 'f4f3f1'
-      gadya: 'f4f3f1'
-      anvaya: 'f4f3f1'
-      ps: 'f4f3f1'
+      text: 'bec4ca'
+      shloka: 'bec4ca'
+      gadya: 'bec4ca'
+      anvaya: 'bec4ca'
+      ps: 'bec4ca'
 
       # The superscript/subscript text inline
       inline-meaning: 'f4f3f1'
 
       # The words in the meanings section
       meaning-word: 'f4f3f1'
-      divider: 'f4f3f1'
+      divider: 'f4f3f180'
+
+  theme2:
+    # Solarized - https://ethanschoonover.com/solarized/
+    name: Solarized
+    light:
+      background: 'fdf6e3'
+      accent: '343a4080'
+
+      # Headings like anvaya, vyakhyana, shabdartha, etc
+      meta-heading: 'C3B197'
+#      meta-heading: 'A4AC86'
+
+      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
+      inline-word: '212529'
+
+      # General text
+      text: '657b83'
+      shloka: '657b83'
+      gadya: '657b83'
+      anvaya: '657b83'
+      ps: '657b83'
+
+      # The superscript/subscript text inline
+      inline-meaning: '657b8380'
+
+      # The words in the meanings section
+      meaning-word: '0e0d0b'
+      divider: 'C3B19740'
+    dark:
+      background: '002b36'
+      accent: 'FF0000'
+
+      # Headings like anvaya, vyakhyana, shabdartha, etc
+#      meta-heading: 'b0c4b1'
+      meta-heading: 'A4AC86'
+
+      # The word in the para which is highlighted with inline-meaning / referred meanings in meaning section
+      inline-word: 'f4f3f1'
+
+      # General text
+      text: '839496'
+      shloka: '839496'
+      gadya: '839496'
+      anvaya: '839496'
+      ps: '839496'
+
+      # The superscript/subscript text inline
+      inline-meaning: '839496'
+
+      # The words in the meanings section
+      meaning-word: 'f4f3f1'
+      divider: '83949640'
 
 # Used in the generation of website, pdf & odt
 selected-theme: theme1

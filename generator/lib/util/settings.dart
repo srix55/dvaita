@@ -47,12 +47,16 @@ class Settings {
       String themeId = themeKey;
       var theme = themes[themeId] as Map;
       SpacingTheme spacingTheme = SpacingTheme(
+          lineHeightToContainInline: theme['line-height-for-superscript-containing-text'],
+          inlineTextOffset: theme['inline-text-offset'],
+          lineHeight: theme['line-height'],
           name: theme['name'],
           pageMargin: theme['page-margin'],
-          pageMarginTopBottom: theme['para-margin-top-bottom'],
+          paraMarginTopBottom: theme['para-margin-top-bottom'],
           chapterTitleMarginBottom: theme['chapter-title-margin-bottom'],
-          dividerMarginTopBottom: theme['divider-margin-top-bottom'],
-          metaHeadingToContent: theme['meta-heading-to-content'],
+          dividerMarginTop: theme['divider-margin-top'],
+          dividerMarginBottom: theme['divider-margin-bottom'],
+          metaHeadingMarginBottom: theme['meta-heading-margin-bottom'],
           shlokaMetaToShloka: theme['shloka-meta-to-shloka']
       );
       if (themeId == selectedSpacingThemeId)
@@ -88,9 +92,6 @@ class Settings {
               textFontFamily: langFonts['text-font-family'],
               textSize: langFonts['text-size'],
               textWeight: langFonts['text-weight'],
-              shlokaMetaFontFamily: langFonts['shloka-meta-font-family'],
-              shlokaMetaSize: langFonts['shloka-meta-size'],
-              shlokaMetaWeight: langFonts['shloka-meta-weight'],
               shlokaFontFamily: langFonts['shloka-font-family'],
               shlokaWeight: langFonts['shloka-weight'],
               shlokaSize: langFonts['shloka-size'],
@@ -127,13 +128,13 @@ class Settings {
       var theme = themes[themeId] as Map;
       String themeName = theme['name'];
       var light = theme['light'] as Map;
-      Colors lite = Colors(background: light['background'],
+      Colors lite = Colors(background: light['background'], accent: light['accent'],
           inlineWord: light['inline-word'], meaningWord: light['meaning-word'],
           metaHeading: light['meta-heading'], text: light['text'], shloka: light['shloka'],
           anvaya: light['anvaya'], ps: light['ps'], inlineMeaning: light['inline-meaning'],
           divider: light['divider'], gadya: light['gadya']);
       var dark = theme['dark'] as Map;
-      Colors dar = Colors(background: dark['background'],
+      Colors dar = Colors(background: dark['background'], accent: dark['accent'],
           inlineWord: dark['inline-word'], meaningWord: dark['meaning-word'],
           metaHeading: dark['meta-heading'], text: dark['text'], shloka: dark['shloka'],
           anvaya: dark['anvaya'], ps: dark['ps'], inlineMeaning: dark['inline-meaning'],
@@ -163,18 +164,22 @@ class Config {
 
 class SpacingTheme {
   final String name;
+  final String lineHeight;
+  final String lineHeightToContainInline;
+  final String inlineTextOffset;
   final String pageMargin;
-  final String pageMarginTopBottom;
+  final String paraMarginTopBottom;
   final String chapterTitleMarginBottom;
-  final String dividerMarginTopBottom;
-  final String metaHeadingToContent;
+  final String dividerMarginTop;
+  final String dividerMarginBottom;
+  final String metaHeadingMarginBottom;
   final String shlokaMetaToShloka;
 
-  SpacingTheme({required this.name, required this.pageMargin, required this.pageMarginTopBottom, required this.chapterTitleMarginBottom, required this.dividerMarginTopBottom, required this.metaHeadingToContent, required this.shlokaMetaToShloka});
+  SpacingTheme({required this.lineHeightToContainInline, required this.inlineTextOffset, required this.lineHeight, required this.name, required this.pageMargin, required this.paraMarginTopBottom, required this.chapterTitleMarginBottom, required this.dividerMarginTop, required this.dividerMarginBottom, required this.metaHeadingMarginBottom, required this.shlokaMetaToShloka});
 
   @override
   String toString() {
-    return 'SpacingTheme{name: $name, pageMargin: $pageMargin, pageMarginTopBottom: $pageMarginTopBottom, chapterTitleMarginBottom: $chapterTitleMarginBottom, dividerMarginTopBottom: $dividerMarginTopBottom, metaHeadingToContent: $metaHeadingToContent, shlokaMetaToShloka: $shlokaMetaToShloka}';
+    return 'SpacingTheme{name: $name, lineHeight: $lineHeight, lineHeightToContainInline: $lineHeightToContainInline, inlineTextOffset: $inlineTextOffset, pageMargin: $pageMargin, paraMarginTopBottom: $paraMarginTopBottom, chapterTitleMarginBottom: $chapterTitleMarginBottom, dividerMarginTop: $dividerMarginTop, dividerMarginBottom: $dividerMarginBottom, metaHeadingMarginBottom: $metaHeadingMarginBottom, shlokaMetaToShloka: $shlokaMetaToShloka}';
   }
 }
 
@@ -204,9 +209,6 @@ class FontTheme {
 
       if (fontFamilyToWeight[f.textFontFamily] == null) fontFamilyToWeight[f.textFontFamily] = {};
       fontFamilyToWeight[f.textFontFamily]!.add(int.parse(f.textWeight));
-
-      if (fontFamilyToWeight[f.shlokaMetaFontFamily] == null) fontFamilyToWeight[f.shlokaMetaFontFamily] = {};
-      fontFamilyToWeight[f.shlokaMetaFontFamily]!.add(int.parse(f.shlokaMetaWeight));
 
       if (fontFamilyToWeight[f.shlokaFontFamily] == null) fontFamilyToWeight[f.shlokaFontFamily] = {};
       fontFamilyToWeight[f.shlokaFontFamily]!.add(int.parse(f.shlokaWeight));
@@ -270,10 +272,6 @@ class Fonts {
   final String textSize;
   final String textWeight;
 
-  final String shlokaMetaFontFamily;
-  final String shlokaMetaSize;
-  final String shlokaMetaWeight;
-
   final String shlokaFontFamily;
   final String shlokaWeight;
   final String shlokaSize;
@@ -300,8 +298,7 @@ class Fonts {
     required this.secondaryHeadingSize, required this.metaHeadingFontFamily, 
     required this.metaHeadingWeight, required this.metaHeadingSize, 
     required this.textFontFamily, required this.textSize, required this.textWeight, 
-    required this.shlokaMetaFontFamily, required this.shlokaMetaSize, 
-    required this.shlokaMetaWeight, required this.shlokaFontFamily, 
+    required this.shlokaFontFamily,
     required this.shlokaWeight, required this.shlokaSize, required this.psFontFamily, 
     required this.psWeight, required this.psSize, required this.inlineFontFamily,
     required this.gadyaFontFamily, required this.gadyaMetaFontFamily,
@@ -310,7 +307,7 @@ class Fonts {
 
   @override
   String toString() {
-    return 'Fonts{lang: $lang, chapterTitleFontFamily: $chapterTitleFontFamily, chapterTitleWeight: $chapterTitleWeight, chapterTitleSize: $chapterTitleSize, secondaryHeadingFontFamily: $secondaryHeadingFontFamily, secondaryHeadingWeight: $secondaryHeadingWeight, secondaryHeadingSize: $secondaryHeadingSize, metaHeadingFontFamily: $metaHeadingFontFamily, metaHeadingWeight: $metaHeadingWeight, metaHeadingSize: $metaHeadingSize, textFontFamily: $textFontFamily, textSize: $textSize, textWeight: $textWeight, shlokaMetaFontFamily: $shlokaMetaFontFamily, shlokaMetaSize: $shlokaMetaSize, shlokaMetaWeight: $shlokaMetaWeight, shlokaFontFamily: $shlokaFontFamily, shlokaWeight: $shlokaWeight, shlokaSize: $shlokaSize, gadyaMetaFontFamily: $gadyaMetaFontFamily, gadyaMetaSize: $gadyaMetaSize, gadyaMetaWeight: $gadyaMetaWeight, gadyaFontFamily: $gadyaFontFamily, gadyaWeight: $gadyaWeight, gadyaSize: $gadyaSize, psFontFamily: $psFontFamily, psWeight: $psWeight, psSize: $psSize, inlineFontFamily: $inlineFontFamily, inlineWeight: $inlineWeight, inlineSize: $inlineSize}';
+    return 'Fonts{lang: $lang, chapterTitleFontFamily: $chapterTitleFontFamily, chapterTitleWeight: $chapterTitleWeight, chapterTitleSize: $chapterTitleSize, secondaryHeadingFontFamily: $secondaryHeadingFontFamily, secondaryHeadingWeight: $secondaryHeadingWeight, secondaryHeadingSize: $secondaryHeadingSize, metaHeadingFontFamily: $metaHeadingFontFamily, metaHeadingWeight: $metaHeadingWeight, metaHeadingSize: $metaHeadingSize, textFontFamily: $textFontFamily, textSize: $textSize, textWeight: $textWeight, shlokaFontFamily: $shlokaFontFamily, shlokaWeight: $shlokaWeight, shlokaSize: $shlokaSize, gadyaMetaFontFamily: $gadyaMetaFontFamily, gadyaMetaSize: $gadyaMetaSize, gadyaMetaWeight: $gadyaMetaWeight, gadyaFontFamily: $gadyaFontFamily, gadyaWeight: $gadyaWeight, gadyaSize: $gadyaSize, psFontFamily: $psFontFamily, psWeight: $psWeight, psSize: $psSize, inlineFontFamily: $inlineFontFamily, inlineWeight: $inlineWeight, inlineSize: $inlineSize}';
   }
 }
 
@@ -330,6 +327,7 @@ class ColorTheme {
 
 class Colors {
   final String background;
+  final String accent;
   final String metaHeading;
   final String inlineWord;
   final String text;
@@ -341,10 +339,10 @@ class Colors {
   final String meaningWord;
   final String divider;
 
-  Colors({required this.background, required this.metaHeading, required this.inlineWord, required this.text, required this.shloka, required this.anvaya, required this.ps, required this.inlineMeaning, required this.meaningWord, required this.divider, required this.gadya});
+  Colors({required this.background, required this.accent, required this.metaHeading, required this.inlineWord, required this.text, required this.shloka, required this.anvaya, required this.ps, required this.inlineMeaning, required this.meaningWord, required this.divider, required this.gadya});
 
   @override
   String toString() {
-    return 'Colors{background: $background, metaHeading: $metaHeading, inlineWord: $inlineWord, text: $text, shloka: $shloka, anvaya: $anvaya, ps: $ps, inlineMeaning: $inlineMeaning, meaningWord: $meaningWord, divider: $divider, gadya: $gadya}';
+    return 'Colors{background: $background, accent: $accent, metaHeading: $metaHeading, inlineWord: $inlineWord, text: $text, shloka: $shloka, anvaya: $anvaya, ps: $ps, inlineMeaning: $inlineMeaning, meaningWord: $meaningWord, divider: $divider, gadya: $gadya}';
   }
 }

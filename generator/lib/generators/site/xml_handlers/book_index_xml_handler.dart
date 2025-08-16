@@ -36,10 +36,6 @@ class BookIndexXmlHandler {
     PageGen(pageTitle: bookInfo.bookTitle.string, folderLevel: 2, fileName: '${bookInfo.bookId}.html', htmlContent: htmlContent, outputDir: p.join(Settings.config.htmlOutputDirectory, 'texts', bookInfo.bookId)).generate();
   }
 
-  void _recursiveHandler(XmlElement xml) {
-    // TBD
-  }
-
   List<BookIndexChapterInfo> _getChapters() {
     List<BookIndexChapterInfo> infoList = [];
     List<XmlElement> chapterElements = bookXml.findAllElements(XmlTag.chapter.tag).toList();

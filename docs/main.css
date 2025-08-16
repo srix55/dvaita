@@ -20,60 +20,65 @@ body, header, footer, main, a, button {
 }
     
 :root {
-  /* theme1:Purple:light */
+  /* theme1:Warm Neutral:light */
   --theme1-light-background: #FFFFFF;
-  --theme1-light-meta-heading: #000000;
-  --theme1-light-inline-word: #000000;
-  --theme1-light-text: #1A659E;
-  --theme1-light-shloka: #000000;
-  --theme1-light-gadya: #000000;
-  --theme1-light-anvaya: #000000;
-  --theme1-light-ps: #000000;
-  --theme1-light-inline-meaning: #000000;
-  --theme1-light-meaning-word: #000000;
-  --theme1-light-divider: #000000;
+  --theme1-light-accent: #343a4080;
+  --theme1-light-meta-heading: #778da9;
+  --theme1-light-inline-word: #212529;
+  --theme1-light-text: #343a40;
+  --theme1-light-shloka: #343a40;
+  --theme1-light-gadya: #343a40;
+  --theme1-light-anvaya: #343a40;
+  --theme1-light-ps: #343a40;
+  --theme1-light-inline-meaning: #343a4080;
+  --theme1-light-meaning-word: #0e0d0b;
+  --theme1-light-divider: #778da926;
 
-  /* theme1:Purple:dark */
-  --theme1-dark-background: #000000;
-  --theme1-dark-meta-heading: #FFFFFF;
-  --theme1-dark-inline-word: #FFFFFF;
-  --theme1-dark-text: #FFFFFF;
-  --theme1-dark-shloka: #FFFFFF;
-  --theme1-dark-gadya: #FFFFFF;
-  --theme1-dark-anvaya: #FFFFFF;
-  --theme1-dark-ps: #FFFFFF;
-  --theme1-dark-inline-meaning: #FFFFFF;
-  --theme1-dark-meaning-word: #FFFFFF;
-  --theme1-dark-divider: #FFFFFF;
-  /* theme2:Brown:light */
-  --theme2-light-background: #f9f8f7;
-  --theme2-light-meta-heading: #0e0d0b;
-  --theme2-light-inline-word: #0e0d0b;
-  --theme2-light-text: #0e0d0b;
-  --theme2-light-shloka: #0e0d0b;
-  --theme2-light-gadya: #0e0d0b;
-  --theme2-light-anvaya: #0e0d0b;
-  --theme2-light-ps: #0e0d0b;
-  --theme2-light-inline-meaning: #0e0d0b;
+  /* theme1:Warm Neutral:dark */
+  --theme1-dark-background: #090807;
+  --theme1-dark-accent: #FF0000;
+  --theme1-dark-meta-heading: #68553c;
+  --theme1-dark-inline-word: #f4f3f1;
+  --theme1-dark-text: #bec4ca;
+  --theme1-dark-shloka: #bec4ca;
+  --theme1-dark-gadya: #bec4ca;
+  --theme1-dark-anvaya: #bec4ca;
+  --theme1-dark-ps: #bec4ca;
+  --theme1-dark-inline-meaning: #f4f3f1;
+  --theme1-dark-meaning-word: #f4f3f1;
+  --theme1-dark-divider: #f4f3f180;
+  /* theme2:Solarized:light */
+  --theme2-light-background: #fdf6e3;
+  --theme2-light-accent: #343a4080;
+  --theme2-light-meta-heading: #C3B197;
+  --theme2-light-inline-word: #212529;
+  --theme2-light-text: #657b83;
+  --theme2-light-shloka: #657b83;
+  --theme2-light-gadya: #657b83;
+  --theme2-light-anvaya: #657b83;
+  --theme2-light-ps: #657b83;
+  --theme2-light-inline-meaning: #657b8380;
   --theme2-light-meaning-word: #0e0d0b;
-  --theme2-light-divider: #0e0d0b;
+  --theme2-light-divider: #C3B19740;
 
-  /* theme2:Brown:dark */
-  --theme2-dark-background: #090807;
-  --theme2-dark-meta-heading: #f4f3f1;
+  /* theme2:Solarized:dark */
+  --theme2-dark-background: #002b36;
+  --theme2-dark-accent: #FF0000;
+  --theme2-dark-meta-heading: #A4AC86;
   --theme2-dark-inline-word: #f4f3f1;
-  --theme2-dark-text: #f4f3f1;
-  --theme2-dark-shloka: #f4f3f1;
-  --theme2-dark-gadya: #f4f3f1;
-  --theme2-dark-anvaya: #f4f3f1;
-  --theme2-dark-ps: #f4f3f1;
-  --theme2-dark-inline-meaning: #f4f3f1;
+  --theme2-dark-text: #839496;
+  --theme2-dark-shloka: #839496;
+  --theme2-dark-gadya: #839496;
+  --theme2-dark-anvaya: #839496;
+  --theme2-dark-ps: #839496;
+  --theme2-dark-inline-meaning: #839496;
   --theme2-dark-meaning-word: #f4f3f1;
-  --theme2-dark-divider: #f4f3f1;
+  --theme2-dark-divider: #83949640;
 }
 
 html[data-theme="theme1"][data-mode="light"] {
   --background: var(--theme1-light-background);
+  --accent: var(--theme1-light-accent);
   --meta-heading: var(--theme1-light-meta-heading);
   --inline-word: var(--theme1-light-inline-word);
   --text: var(--theme1-light-text);
@@ -87,6 +92,7 @@ html[data-theme="theme1"][data-mode="light"] {
 }
 html[data-theme="theme1"][data-mode="dark"] {
   --background: var(--theme1-dark-background);
+  --accent: var(--theme1-dark-accent);
   --meta-heading: var(--theme1-dark-meta-heading);
   --inline-word: var(--theme1-dark-inline-word);
   --text: var(--theme1-dark-text);
@@ -100,6 +106,7 @@ html[data-theme="theme1"][data-mode="dark"] {
 }
 html[data-theme="theme2"][data-mode="light"] {
   --background: var(--theme2-light-background);
+  --accent: var(--theme2-light-accent);
   --meta-heading: var(--theme2-light-meta-heading);
   --inline-word: var(--theme2-light-inline-word);
   --text: var(--theme2-light-text);
@@ -113,6 +120,7 @@ html[data-theme="theme2"][data-mode="light"] {
 }
 html[data-theme="theme2"][data-mode="dark"] {
   --background: var(--theme2-dark-background);
+  --accent: var(--theme2-dark-accent);
   --meta-heading: var(--theme2-dark-meta-heading);
   --inline-word: var(--theme2-dark-inline-word);
   --text: var(--theme2-dark-text);
@@ -127,7 +135,7 @@ html[data-theme="theme2"][data-mode="dark"] {
 
     
 body {
-    margin: 20px;
+    margin: 25px;
     background-color: var(--background);
     color: var(--text);
     font-family: "Noto Sans Devanagari", sans-serif;
@@ -136,6 +144,11 @@ body {
     line-height: 1.5;
     font-variation-settings:
             "wdth" 100;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 body a {
@@ -176,23 +189,60 @@ footer {
     color: var(--text);
 }
 
+hr {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    border: none;
+    border-top: 1px solid var(--divider);
+}
+
+.next,
+.previous {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 15px;
+    color: var(--meta-heading);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 .chapter-links,
-.shloka-links {
-    border: 0.1px solid var(--text);
+.moola-links {
+    border: 1px solid var(--divider);
     border-radius: 5px;
     padding: 15px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-size: 14px;
     color: var(--text);
 }
 
 .chapter-title {
     margin-bottom: 25px;
+    color: var(--text);
+}
+
+.shloka {
+    text-align: center;
+    color: var(--shloka);
+    margin-bottom: 10px;
 }
 
 .anvaya {
     color: var(--anvaya);
+    line-height: 2.25;
+}
+
+.meta-heading {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: var(--meta-heading);
+}
+
+/* This is to accommodate inline-superscript text */
+.extra-line-height {
+    line-height: 2.25;
 }
 
 .landing-title {
@@ -207,6 +257,20 @@ footer {
             "wdth" 100;
 }
 
+.inline {
+    vertical-align: baseline;
+    position: absolute;
+    top: -38px;
+    left: -30px;
+    width: 150px;
+    color: var(--inline-meaning);
+}
+
+.dotted-underline {
+    border-bottom: 1px dashed var(--inline-meaning);
+    text-decoration: none; /* prevent default underline */
+}
+
 /* Font definitions */
 .san {
   font-family: "Noto Sans Devanagari", sans-serif;
@@ -216,71 +280,55 @@ footer {
   font-family: "Noto Sans Devanagari", sans-serif;
   font-weight: 500;
   font-size: 40px;
-  color: var(--text);
 }
 
 .san-secondary-heading {
   font-family: "Noto Sans Devanagari", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--text);
 }
 
 .san-meta-heading {
   font-family: "Noto Sans Devanagari", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
-  color: var(--meta-heading);
 }
 
 .san-text {
   font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 400;
-  color: var(--text);
-}
-
-.san-shloka-meta {
-  font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--shloka);
 }
 
 .san-shloka {
   font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
-  color: var(--shloka);
 }
 
 .san-gadya-meta {
   font-family: "Noto Sans Devanagari", sans-serif;
   font-size: 12px;
   font-weight: 300;
-  color: var(--gadya);
 }
 
 .san-gadya {
   font-family: "Noto Sans Devanagari", sans-serif;
   font-size: 40px;
   font-weight: 500;
-  color: var(--gadya);
 }
 
 .san-ps {
   font-family: "Noto Sans Devanagari", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: var(--ps);
 }
 
 .san-inline {
   font-family: "Noto Sans Devanagari", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--inline-meaning);
-  vertical-align: super;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .kan {
@@ -291,71 +339,55 @@ footer {
   font-family: "Noto Sans Kannada", sans-serif;
   font-weight: 500;
   font-size: 40px;
-  color: var(--text);
 }
 
 .kan-secondary-heading {
   font-family: "Noto Sans Kannada", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 24px;
   color: var(--text);
 }
 
 .kan-meta-heading {
   font-family: "Noto Sans Kannada", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  color: var(--meta-heading);
+  font-size: 21px;
 }
 
 .kan-text {
   font-family: "Noto Sans Kannada", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  color: var(--text);
-}
-
-.kan-shloka-meta {
-  font-family: "Noto Sans Kannada", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--shloka);
 }
 
 .kan-shloka {
   font-family: "Noto Sans Kannada", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
-  color: var(--shloka);
 }
 
 .kan-gadya-meta {
   font-family: "Noto Sans Kannada", sans-serif;
   font-size: 12px;
   font-weight: 300;
-  color: var(--gadya);
 }
 
 .kan-gadya {
   font-family: "Noto Sans Kannada", sans-serif;
   font-size: 40px;
   font-weight: 500;
-  color: var(--gadya);
 }
 
 .kan-ps {
   font-family: "Noto Sans Kannada", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: var(--ps);
 }
 
 .kan-inline {
   font-family: "Noto Sans Kannada", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--inline-meaning);
-  vertical-align: super;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .eng {
@@ -366,71 +398,55 @@ footer {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 40px;
-  color: var(--text);
 }
 
 .eng-secondary-heading {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--text);
 }
 
 .eng-meta-heading {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  color: var(--meta-heading);
+  font-size: 21px;
 }
 
 .eng-text {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   font-weight: 400;
-  color: var(--text);
-}
-
-.eng-shloka-meta {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--shloka);
 }
 
 .eng-shloka {
   font-family: "Roboto", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
-  color: var(--shloka);
 }
 
 .eng-gadya-meta {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 300;
-  color: var(--gadya);
 }
 
 .eng-gadya {
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   font-weight: 500;
-  color: var(--gadya);
 }
 
 .eng-ps {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: var(--ps);
 }
 
 .eng-inline {
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--inline-meaning);
-  vertical-align: super;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 
