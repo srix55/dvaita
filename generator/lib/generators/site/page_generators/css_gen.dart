@@ -108,7 +108,7 @@ hr {
     display: inline-block;
     font-size: 15px;
     margin-right: 15px;
-    color: var(--meta-heading);
+    color: var(--accent);
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -163,6 +163,35 @@ hr {
             "wdth" 100;
 }
 
+.superscript-links-container {
+    margin-left: 4px;
+    margin-right: 4px;
+    user-select: none;
+}
+
+.superscript-links-container:first-child {
+    margin-left: 0px;
+}
+
+.meaning-link,
+.grammar-link,
+.ps-link {
+    vertical-align: super;
+    font-weight: ${sanFonts.inlineWeight};
+    font-size: ${sanFonts.inlineSize};
+    margin-left: 1px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.meaning-link:hover,
+.grammar-link:hover,
+.ps-link:hover {
+    text-decoration: overline;
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+}
+
 .inline {
     vertical-align: baseline;
     position: absolute;
@@ -170,6 +199,7 @@ hr {
     left: -30px;
     width: 150px;
     color: var(--inline-meaning);
+    user-select: none;
 }
 
 .dotted-underline {

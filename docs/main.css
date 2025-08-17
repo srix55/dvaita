@@ -49,7 +49,7 @@ body, header, footer, main, a, button {
   --theme1-dark-divider: #f4f3f180;
   /* theme2:Solarized:light */
   --theme2-light-background: #fdf6e3;
-  --theme2-light-accent: #343a4080;
+  --theme2-light-accent: #00afb9;
   --theme2-light-meta-heading: #C3B197;
   --theme2-light-inline-word: #212529;
   --theme2-light-text: #657b83;
@@ -202,7 +202,7 @@ hr {
     display: inline-block;
     font-size: 15px;
     margin-right: 15px;
-    color: var(--meta-heading);
+    color: var(--accent);
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -257,6 +257,35 @@ hr {
             "wdth" 100;
 }
 
+.superscript-links-container {
+    margin-left: 4px;
+    margin-right: 4px;
+    user-select: none;
+}
+
+.superscript-links-container:first-child {
+    margin-left: 0px;
+}
+
+.meaning-link,
+.grammar-link,
+.ps-link {
+    vertical-align: super;
+    font-weight: 500;
+    font-size: 10px;
+    margin-left: 1px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.meaning-link:hover,
+.grammar-link:hover,
+.ps-link:hover {
+    text-decoration: overline;
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+}
+
 .inline {
     vertical-align: baseline;
     position: absolute;
@@ -264,6 +293,7 @@ hr {
     left: -30px;
     width: 150px;
     color: var(--inline-meaning);
+    user-select: none;
 }
 
 .dotted-underline {

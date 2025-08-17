@@ -54,7 +54,7 @@ color-themes:
     name: Solarized
     light:
       background: 'fdf6e3'
-      accent: '343a4080'
+      accent: '00afb9'
 
       # Headings like anvaya, vyakhyana, shabdartha, etc
       meta-heading: 'C3B197'

@@ -1,7 +1,7 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 
 import 'package:generator/generators/site/xml_handlers/moola_xml_handler.dart';
-import 'package:generator/models/string_with_lang.dart';
+import 'package:generator/generators/site/xml_handlers/segment_xml_handler.dart';
 import 'package:generator/models/xml_tag.dart';
 import 'package:xml/xml.dart';
 
@@ -141,64 +141,7 @@ class RecursiveHandler {
         }
         break;
       case XmlTag.s:
-        bool em = xml.attributes.any((att) => att.localName == Attribute.em.tag);
-        String? id = xml.getAttribute(Attribute.id.tag);
-        String? lang = xml.getAttribute(Attribute.lang.tag);
-        String? qm = xml.getAttribute(Attribute.qm.tag);
-        List<StringWithLang> quickMeanings = [];
-        if (qm != null) {
-          List<String> words = qm.split('_');
-          for (String w in words) {
-            if (w.contains('#')) { // Has language too, else use default sanskrit
-              List<String> wordAndLanguage = w.split('#');
-              String lang = wordAndLanguage[0];
-              String word = wordAndLanguage[1];
-              quickMeanings.add(StringWithLang(string: word, lang: lang));
-            } else {
-              quickMeanings.add(StringWithLang(string: w, lang: 'san'));
-            }
-          }
-        }
-        List<String> features = xml.getAttribute(Attribute.feat.tag)?.split(',') ?? [];
-        bool isMeaning = false, isGrammar = false, isPs = false;
-        for (String feat in features) {
-          switch(feat) {
-            case 'm': isMeaning = true; break;
-            case 'g': isGrammar = true; break;
-            case 'ps': isPs = true; break;
-          }
-        }
-        String? segClass;
-        // Check if this segment was in a heading. To retain the heading class with lang change, for which it was likely segmented
-        if (xml.parentElement?.localName == XmlTag.heading.tag) segClass = lang != null ? '$lang-secondary-heading' : '';
-        if (xml.childElements.isEmpty) {
-          if (em == false && id == null && lang == null)
-            buff.write('<span class="segment">${xml.innerText}</span>');
-          else {
-            if (quickMeanings.isNotEmpty) {
-              if (segClass != null) segClass = '$segClass dotted-underline';
-              else segClass = 'dotted-underline';
-            }
-            buff.write('<span${id != null ? ' id="$id"' : ''}${segClass != null ? ' class="$segClass"':''}>${xml.innerText}</span>');
-          }
-        } else {
-          if (em == false && id == null && lang == null)
-            buff.write('<span>');
-          else {
-            if (quickMeanings.isNotEmpty) {
-              if (segClass != null) segClass = '$segClass dotted-underline';
-              else segClass = 'dotted-underline';
-            }
-            buff.write('<span${id != null ? ' id="$id"' : ''}${segClass != null ? ' class="$segClass"':''}>');
-          }
-          _handleNesting(xml);
-          buff.write('</span>');
-        }
-        if (quickMeanings.isNotEmpty) buff.write('<span style="position: relative; display: inline-block;">');
-        for (StringWithLang quickMeaning in quickMeanings) {
-          buff.write('<span class="${quickMeaning.lang}-inline inline">${quickMeaning.string}</span>');
-        }
-        if (quickMeanings.isNotEmpty) buff.write('</span>');
+        SegmentXmlHandler(xml: xml, bookInfo: bookInfo, buff: buff).handle();
         break;
       case XmlTag.ps:
       case XmlTag.ps_ref:
