@@ -152,7 +152,8 @@ class RecursiveHandler {
         buff.writeln('<hr><div class="san-meta-heading meta-heading">अर्थाः</div><div style="margin-top: ${Settings.spacing.paraMarginTopBottom}"></div>');
         buff.writeln('<div class="meanings-container">');
         _handleNesting(xml);
-        buff.writeln('</div>');
+        buff.writeln('</div> <!-- meanings-container end -->');
+        buff.writeln('</div> <!-- meanings-section end -->');
         break;
       case XmlTag.word_with_meaning:
         buff.write('<div class="word-with-meaning extra-line-height">');
@@ -173,14 +174,100 @@ class RecursiveHandler {
         buff.write('</span>');
         break;
       case XmlTag.grammar_section:
-        buff.writeln('<hr><div class="san-meta-heading meta-heading">व्याकरणविषयाः</div>');
+        buff.writeln('<hr><div class="san-meta-heading meta-heading">व्याकरणविषयाः</div><div style="margin-top: ${Settings.spacing.paraMarginTopBottom}"></div>');
+        buff.writeln('<div class="grammar-container">');
+        _handleNesting(xml);
+        buff.writeln('</div> <!-- grammar-container end -->');
+        buff.writeln('</div> <!-- grammar-section end -->');
         break;
       case XmlTag.grammar_point:
+        String? refId = xml.getAttribute(Attribute.ref_id.tag);
+        String grammarPrefix = Constants.grammarPrefix;
+        String actualRefId = refId == null ? '' : 'id = "$grammarPrefix$refId"';
+        buff.write('<div $actualRefId class="grammar-point extra-line-height">');
+        _handleNesting(xml);
+        String? extLinks = xml.getAttribute(Attribute.ext_link.tag);
+        if (extLinks != null) {
+          buff.writeln("<div>");
+          List<String> linkWithName = extLinks.split('|');
+          for (String l in linkWithName) {
+            var link = LinkWithName.parse(l);
+            buff.write('<a href="${link.url}" lang="${link.lang}" target="_blank" rel="noopener noreferrer">${link.name}</a> ');
+          }
+          buff.writeln("</div>");
+        }
+        buff.writeln('</div>');
+        break;
       case XmlTag.shabda_roopa:
+        buff.write('<div class="shabda-roopa san-text">');
+        StringBuffer shabdaMeta = StringBuffer();
+        String? ending = xml.getAttribute(Attribute.ending.tag);
+        String? linga = xml.getAttribute(Attribute.linga.tag);
+        String? shabdaName = xml.getAttribute(Attribute.name.tag);
+        if (ending != null) shabdaMeta.write('$endingकारान्तः ');
+        if (linga != null) shabdaMeta.write('$linga ');
+        if (shabdaName != null) shabdaMeta.write(' $shabdaName शब्दः');
+        if (shabdaMeta.isNotEmpty)
+          buff.writeln('<div class="shabda-meta san-text">${shabdaMeta.toString()}</div>');
+        if (xml.childElements.isNotEmpty)
+          buff.writeln('<table><tr><th></th><th class="san-text">एकवचनं</th><th class="san-text">द्विवचनं</th><th class="san-text">बहुवचनं</th></tr>');
+        _handleNesting(xml);
+        if (xml.childElements.isNotEmpty)
+          buff.writeln('</table>');
+        buff.writeln('</div>');
+        break;
       case XmlTag.vibhakti:
+        String vibhakti = xml.getAttribute(Attribute.name.tag)!;
+        buff.write('<tr><td class="san-text">$vibhakti</td>');
+        _handleNesting(xml);
+        buff.write('</tr>');
+        break;
       case XmlTag.vachana:
+        // String vachana = xml.getAttribute(Attribute.vachana.tag)!;
+        buff.write('<td class="san-text">${xml.innerText}</td>');
+        break;
       case XmlTag.kriya_roopa:
+        buff.write('<div class="kriya-roopa san-text">');
+        StringBuffer kriyaMeta = StringBuffer();
+        String dhatu = xml.getAttribute(Attribute.dhatu.tag)!;
+        String? dhatuMeaning = xml.getAttribute(Attribute.dhatu_meaning.tag);
+        String? gana = xml.getAttribute(Attribute.gana.tag);
+        String? karmaka = xml.getAttribute(Attribute.karmaka.tag);
+        String? it = xml.getAttribute(Attribute.it.tag);
+        kriyaMeta.write('$dhatu ');
+        if (dhatuMeaning != null) kriyaMeta.write('$dhatuMeaning ');
+        if (gana != null) kriyaMeta.write('$gana ');
+        if (karmaka != null) kriyaMeta.write('$karmaka ');
+        if (it != null) kriyaMeta.write('$it ');
+        if (kriyaMeta.isNotEmpty)
+          buff.writeln('<div class="kriya-meta san-text">${kriyaMeta.toString()}</div>');
+        _handleNesting(xml);
+        buff.writeln('</div>');
+        break;
+      case XmlTag.lakara_roopa:
+        buff.write('<div class="lakara-roopa san-text">');
+        StringBuffer lakaraMeta = StringBuffer();
+        String lakara = xml.getAttribute(Attribute.lakara.tag)!;
+        String? prayoga = xml.getAttribute(Attribute.prayoga.tag);
+        String? padi = xml.getAttribute(Attribute.padi.tag);
+        lakaraMeta.write('$lakara ');
+        if (prayoga != null) lakaraMeta.write('$prayoga ');
+        if (padi != null) lakaraMeta.write('$padi ');
+        if (lakaraMeta.isNotEmpty)
+          buff.writeln('<div class="kriya-meta san-text">${lakaraMeta.toString()}</div>');
+        if (xml.childElements.isNotEmpty)
+          buff.writeln('<table><tr class="san-text"><th></th><th class="san-text">एकवचनं</th><th class="san-text">द्विवचनं</th><th class="san-text">बहुवचनं</th></tr>');
+        _handleNesting(xml);
+        if (xml.childElements.isNotEmpty)
+          buff.writeln('</table>');
+        buff.writeln('</div>');
+        break;
       case XmlTag.purusha:
+        String purusha = xml.getAttribute(Attribute.name.tag)!;
+        buff.write('<tr><td class="san-text">$purusha</td>');
+        _handleNesting(xml);
+        buff.write('</tr>');
+        break;
     }
   }
 
@@ -191,5 +278,28 @@ class RecursiveHandler {
       else if (x.nodeType == XmlNodeType.ELEMENT)
         _recursiveHandler(x as XmlElement);
     }
+  }
+}
+
+class LinkWithName {
+  final String lang;
+  final String name;
+  final String url;
+
+  LinkWithName(this.lang, this.name, this.url);
+
+  factory LinkWithName.parse(String text) {
+    final regex = RegExp(r'^\(([^:]+):([^)]+)\)\[([^\]]+)\]$');
+    final match = regex.firstMatch(text);
+
+    if (match == null) {
+      throw FormatException("Invalid format: $text");
+    }
+
+    return LinkWithName(
+      match.group(1)!, // language
+      match.group(2)!, // name
+      match.group(3)!, // url
+    );
   }
 }

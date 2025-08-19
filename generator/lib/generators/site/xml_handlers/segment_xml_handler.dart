@@ -72,7 +72,7 @@ class SegmentXmlHandler {
     // Handle links
     if (_fMeaning || _fGrammar || _fPs) buff.write('<span class="superscript-links-container">');
     if (_fMeaning) buff.write('<a href="#${Constants.meaningPrefix}$_id" class="meaning-link">[m]</a>');
-    if (_fGrammar) buff.write('<a href="#{Constants.grammarPrefix}$_id" class="grammar-link">[g]</a>');
+    if (_fGrammar) buff.write('<a href="#${Constants.grammarPrefix}$_id" class="grammar-link">[g]</a>');
     if (_fPs) buff.write('<a href="#${Constants.psPrefix}$_id" class="ps-link">[${Constants.psSymbol}]</a>');
     if (_fMeaning || _fGrammar || _fPs) buff.write('</span>');
   }

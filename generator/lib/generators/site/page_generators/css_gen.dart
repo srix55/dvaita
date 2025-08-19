@@ -205,6 +205,24 @@ hr {
     user-select: none;
 }
 
+.grammar-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 600px));
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 0;
+    /*max-width: 900px;*/  /* or whatever feels good */
+    margin: 0 auto;    /* centers the grid */
+}
+
+table, th, td {
+    border: 1px solid var(--divider);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: normal;
+    border-collapse: collapse; /* makes single border instead of double */
+}
+
 .meanings-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
@@ -215,7 +233,12 @@ hr {
     margin: 0 auto;    /* centers the grid */
 }
 
-.word-with-meaning {
+.word-with-meaning,
+.grammar-point {
+}
+
+.shabda-meta,
+.kriya-meta {
 }
 
 .meaning-word {

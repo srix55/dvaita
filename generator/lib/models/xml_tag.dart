@@ -28,9 +28,10 @@ enum XmlTag {
   grammar_section(attributes: {}, tag: 'grammar-section'),
   grammar_point(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'grammar-point'),
   shabda_roopa(attributes: {Attribute.ending, Attribute.linga, Attribute.name}, tag: 'shabda-roopa'),
+  kriya_roopa(attributes: {Attribute.dhatu, Attribute.dhatu_meaning, Attribute.gana, Attribute.karmaka, Attribute.it}, tag: 'kriya-roopa'),
+  lakara_roopa(attributes: {Attribute.lakara, Attribute.prayoga, Attribute.padi}, tag: 'lakara-roopa'),
   vibhakti(attributes: {Attribute.id}, tag: 'vibhakti'),
   vachana(attributes: {Attribute.id}, tag: 'vachana'),
-  kriya_roopa(attributes: {Attribute.dhatu, Attribute.lakara, Attribute.dhatu_meaning, Attribute.gana, Attribute.prayoga, Attribute.padi}, tag: 'kriya-roopa'),
   purusha(attributes: {Attribute.id}, tag: 'purusha');
 
   final Set<Attribute> attributes;
@@ -50,8 +51,9 @@ enum Attribute {
   lang(tag: 'lang'), name(tag: 'name'), number(tag: 'number'), level(tag: 'level'),
   id(tag: 'id'), alankara(tag: 'alankara'), vruttam(tag: 'vruttam'), em(tag: 'em'),
   feat(tag: 'feat'), qm(tag: 'qm'),
-  ref_id(tag: 'ref-id'), ending(tag: 'ending'), linga(tag: 'linga'), vachana(tag: 'vachana'),
-  dhatu(tag: 'dhatu'), lakara(tag: 'lakara'), dhatu_meaning(tag: 'dhatu-meaning'),
+  ref_id(tag: 'ref-id'), ext_link(tag: 'ext-link'), ending(tag: 'ending'), linga(tag: 'linga'), vachana(tag: 'vachana'),
+  dhatu(tag: 'dhatu'), lakara(tag: 'lakara'), karmaka(tag: 'karmaka'), it(tag: 'it'),
+  dhatu_meaning(tag: 'dhatu-meaning'),
   gana(tag: 'gana'), prayoga(tag: 'prayoga'), padi(tag: 'padi'), purusha(tag: 'purusha'),
   book_type(tag: 'book-type');
 
