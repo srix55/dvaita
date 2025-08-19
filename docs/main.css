@@ -762,6 +762,7 @@ table, th, td {
 .word-with-meaning,
 .grammar-point {
     display: inline-block;
+    scroll-margin-top: 85px;
 }
 
 .shabda-roopa,
@@ -792,11 +793,18 @@ table, th, td {
 }
 
 .meaning-word {
+    scroll-margin-top: 85px;
     display: inline-block;
     color: var(--meaning-word);
 }
 
 .meaning-word:target {
+    animation: material-shake 0.5s cubic-bezier(.36,.07,.19,.97) both 3;
+}
+
+.grammar-point:target .shabda-meta,
+.grammar-point:target .kriya-meta,
+.grammar-point:target p {
     animation: material-shake 0.5s cubic-bezier(.36,.07,.19,.97) both 3;
 }
 
