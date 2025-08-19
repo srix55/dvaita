@@ -50,9 +50,9 @@
                 <p lang="san">एवं प्रकारेण, अयं श्लोकः भगवतः सौन्दर्यम्, गुणपूर्णताम्, तेजस्विताम्, दार्शनिकस्वरूपम्, ऐश्वर्यं च <s id="w2" qm="eng#simultaneously">युगपत्</s> वर्णयति। "नमस्करोमि" इति क्रियापदेन भक्तस्य सम्पूर्णः आत्मसमर्पणभावः प्रकटितो भवति।</p>
             </vyakhyana>
             <meanings-section>
-                <meaning-point>
-                    <meaning-word ref-id="w1" lang="san">कान्त वि.</meaning-word><meaning>सुन्दर .वि, मनोरम .वि</meaning>
-                </meaning-point>
+                <word-with-meaning>
+                    <meaning-word ref-id="w1" lang="san">कान्त वि.</meaning-word><meaning lang="san">सुन्दर .वि, मनोरम .वि</meaning>
+                </word-with-meaning>
             </meanings-section>
             <grammar-section>
                 <grammar-point ref-id="w1">अकारान्तः पुल्लिङ्गः कान्त शब्दः</grammar-point>
@@ -67,13 +67,34 @@
             <vyakhyana lang="san" ref-id="np">श्रीनारायणपण्डिताचार्याणां व्याख्यानः</vyakhyana>
             <vyakhyana lang="san" ref-id="vkp">
                 <p lang="san">श्रीप्रभञ्जनाचार्याणां व्याख्यानः - श्रीमन्नारायणः सुन्दरः । मङ्गलगुणानाम् आश्रयः । नवोदितसूर्यवत् कान्तियुक्तः । समग्रस्य विश्वस्य हेतुः । लक्श्म्याः पतिः । श्रीमुख्यप्राणस्य स्वामी । तादृशं महाविष्णुम् अहं नमामि ।</p>
-                <p lang="san">अहं तस्मै भगवते प्रणामं करोमि, यस्य स्वरूपम् अतीव सुन्दरं तथा च चित्ताकर्षकम् अस्ति (कान्ताय)। यः सर्वेषां शुभगुणानाम् एकमात्रम् आगारम् अस्ति (कल्याणगुणैकधाम्ने)। यस्य शरीरस्य कान्तिः बालसूर्यस्य तेजः इव प्रकाशते (नवद्युनाथप्रतिमप्रभाय)। यः स्वयं नारायणः, सर्वेषां जीवानाम् अन्तिमः आश्रयः अस्ति। यः एव अस्य समग्रस्य ब्रह्माण्डस्य आदिकारणम् अस्ति (अखिलाकारणाय)। यः देव्याः लक्ष्म्याः अपि प्राणप्रियः स्वामी अस्ति (श्रीप्राणनाथाय)।</p>
+                <p lang="san">अहं तस्मै <s id="q123" feat="m">भगवते</s> प्रणामं करोमि, यस्य स्वरूपम् अतीव सुन्दरं तथा च चित्ताकर्षकम् अस्ति (कान्ताय)। यः सर्वेषां शुभगुणानाम् एकमात्रम् आगारम् अस्ति (कल्याणगुणैकधाम्ने)। यस्य शरीरस्य कान्तिः बालसूर्यस्य तेजः इव प्रकाशते (नवद्युनाथप्रतिमप्रभाय)। यः स्वयं नारायणः, सर्वेषां जीवानाम् अन्तिमः आश्रयः अस्ति। यः एव अस्य समग्रस्य ब्रह्माण्डस्य आदिकारणम् अस्ति (अखिलाकारणाय)। यः देव्याः लक्ष्म्याः अपि प्राणप्रियः स्वामी अस्ति (श्रीप्राणनाथाय)।</p>
                 <p lang="san">एवं प्रकारेण, अयं श्लोकः भगवतः सौन्दर्यम्, गुणपूर्णताम्, तेजस्विताम्, दार्शनिकस्वरूपम्, ऐश्वर्यं च <s id="w2" qm="eng#simultaneously">युगपत्</s> वर्णयति। "नमस्करोमि" इति क्रियापदेन भक्तस्य सम्पूर्णः आत्मसमर्पणभावः प्रकटितो भवति।</p>
             </vyakhyana>
             <meanings-section>
-                <meaning-point>
-                    <meaning-word ref-id="w1" lang="san">कान्त वि.</meaning-word><meaning>सुन्दर .वि, मनोरम .वि</meaning>
-                </meaning-point>
+                <word-with-meaning>
+                    <meaning-word ref-id="w1" lang="san">कान्त .वि</meaning-word><meaning lang="san">सुन्दर .वि, मनोरम .वि</meaning>
+                </word-with-meaning>
+                <word-with-meaning>
+                    <meaning-word ref-id="q123" lang="san">भगवान् .पु</meaning-word><meaning lang="san">षड्गुणसम्पन्नः .पु</meaning>
+                </word-with-meaning>
+                <word-with-meaning>
+                    <meaning-word lang="san">कान्त .वि</meaning-word><meaning lang="san">सुन्दर .वि, मनोरम .वि</meaning>
+                </word-with-meaning>
+                <word-with-meaning>
+                    <meaning-word lang="san">भगवान् .पु</meaning-word><meaning lang="san">षड्गुणसम्पन्नः .पु</meaning>
+                </word-with-meaning>
+                <word-with-meaning>
+                    <meaning-word lang="san">कान्त .वि</meaning-word><meaning lang="san">सुन्दर .वि, मनोरम .वि</meaning>
+                </word-with-meaning>
+                <word-with-meaning>
+                    <meaning-word lang="san">भगवान् .पु</meaning-word><meaning lang="san">षड्गुणसम्पन्नः .पु</meaning>
+                </word-with-meaning>
+                <word-with-meaning>
+                    <meaning-word lang="san">कान्त .वि</meaning-word><meaning lang="san">सुन्दर .वि, मनोरम .वि</meaning>
+                </word-with-meaning>
+                <word-with-meaning>
+                    <meaning-word lang="san">भगवान् .पु</meaning-word><meaning lang="san">षड्गुणसम्पन्नः .पु</meaning>
+                </word-with-meaning>
             </meanings-section>
             <grammar-section>
                 <grammar-point ref-id="w1">अकारान्तः पुल्लिङ्गः कान्त शब्दः</grammar-point>

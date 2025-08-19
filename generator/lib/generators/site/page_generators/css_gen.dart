@@ -20,6 +20,9 @@ class CssGen {
 /* ${Constants.autoGenComment} */    
     
 html {
+  /* Links within the page are scrolled to smoothly instead of jumping */
+  scroll-behavior: smooth;
+
   /* Smooth transition for colors, backgrounds, borders */
   transition: 
     background-color 0.3s ease,
@@ -200,6 +203,23 @@ hr {
     width: 150px;
     color: var(--inline-meaning);
     user-select: none;
+}
+
+.meanings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 0;
+    /*max-width: 900px;*/  /* or whatever feels good */
+    margin: 0 auto;    /* centers the grid */
+}
+
+.word-with-meaning {
+}
+
+.meaning-word {
+    color: var(--meaning-word);
 }
 
 .dotted-underline {

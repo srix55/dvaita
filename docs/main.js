@@ -1,7 +1,7 @@
 // ++++++++ AUTO GENERATED FILE ++++++++
     
 // List of themes you want to cycle through
-const themes = ['theme1', 'theme2'];
+const themes = ['theme1', 'theme2', 'theme3', 'theme4', 'theme5', 'theme6', 'theme7', 'theme8', 'theme9'];
 
 // Apply theme & mode to the <html> element
 function setTheme(theme, mode) {

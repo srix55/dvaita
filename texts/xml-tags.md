@@ -70,7 +70,7 @@
     - ref-id: Id in reference to a marked segment
     - lang: kan/eng/san, 3 letter iso standard for language
 - meanings-section: Section defining meanings & linga of words
-  - meaning-point:
+  - word-with-meaning:
     - meaning-word: Word referenced
       - Attributes:-
         - ref-id: Id in reference to a marked segment

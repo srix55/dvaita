@@ -1,8 +1,10 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 
+import 'package:generator/generators/site/util/constants.dart';
 import 'package:generator/generators/site/xml_handlers/moola_xml_handler.dart';
 import 'package:generator/generators/site/xml_handlers/segment_xml_handler.dart';
 import 'package:generator/models/xml_tag.dart';
+import 'package:generator/util/settings.dart';
 import 'package:xml/xml.dart';
 
 import '../../../models/book_info.dart';
@@ -61,9 +63,9 @@ class RecursiveHandler {
           buff.writeln('<hr>');
         for (XmlElement x in xml.childElements)
           _recursiveHandler(x);
-        String? nextSibling = xml.nextElementSibling?.localName;
-        if (nextSibling != null && (nextSibling == XmlTag.text_with_heading.tag || nextSibling == XmlTag.heading.tag))
-          buff.writeln('<hr>');
+        // String? nextSibling = xml.nextElementSibling?.localName;
+        // if (nextSibling != null && (nextSibling == XmlTag.text_with_heading.tag || nextSibling == XmlTag.heading.tag))
+        //   buff.writeln('<hr>');
         break;
       case XmlTag.heading:
         // All headings other than chapter-title are secondary headings
@@ -145,11 +147,34 @@ class RecursiveHandler {
         break;
       case XmlTag.ps:
       case XmlTag.ps_ref:
+        break;
       case XmlTag.meanings_section:
-      case XmlTag.meaning_point:
+        buff.writeln('<hr><div class="san-meta-heading meta-heading">अर्थाः</div><div style="margin-top: ${Settings.spacing.paraMarginTopBottom}"></div>');
+        buff.writeln('<div class="meanings-container">');
+        _handleNesting(xml);
+        buff.writeln('</div>');
+        break;
+      case XmlTag.word_with_meaning:
+        buff.write('<div class="word-with-meaning extra-line-height">');
+        _handleNesting(xml);
+        buff.writeln('</div>');
+        break;
       case XmlTag.meaning_word:
+        String? refId = xml.getAttribute(Attribute.ref_id.tag);
+        String actualRefId = refId == null ? '' : 'id = "${Constants.meaningPrefix}$refId"';
+        String lang = xml.getAttribute(Attribute.lang.tag)!;
+        buff.write('<span $actualRefId class="$lang-text meaning-word">${xml.innerText}</span>');
+        break;
       case XmlTag.meaning:
+        String lang = xml.getAttribute(Attribute.lang.tag)!;
+        buff.write('<span class="san-text"> &raquo; </span><span class="$lang-text">');
+        if (xml.childElements.isEmpty) buff.write(xml.innerText);
+        else _handleNesting(xml);
+        buff.write('</span>');
+        break;
       case XmlTag.grammar_section:
+        buff.writeln('<hr><div class="san-meta-heading meta-heading">व्याकरणविषयाः</div>');
+        break;
       case XmlTag.grammar_point:
       case XmlTag.shabda_roopa:
       case XmlTag.vibhakti:

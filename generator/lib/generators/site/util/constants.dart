@@ -6,4 +6,8 @@ class Constants {
   static final StringWithLang siteTitle = StringWithLang(lang: 'san', string: 'द्वैतग्रन्थाः');
   static final autoGenComment = '++++++++ AUTO GENERATED FILE ++++++++';
   static final psSymbol = '+';
+  static final meaningPrefix = 'meaning-ref-';
+  static final grammarPrefix = 'grammar-ref-';
+  static final psPrefix = 'ps-ref-';
+  static final meaningToWordSeparator = '&raquo;';
 }

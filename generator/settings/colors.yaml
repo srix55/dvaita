@@ -74,11 +74,11 @@ color-themes:
       inline-meaning: '657b8380'
 
       # The words in the meanings section
-      meaning-word: '0e0d0b'
+      meaning-word: '00afb9'
       divider: 'C3B19740'
     dark:
       background: '002b36'
-      accent: 'FF0000'
+      accent: 'f39c12'
 
       # Headings like anvaya, vyakhyana, shabdartha, etc
 #      meta-heading: 'b0c4b1'
@@ -98,8 +98,220 @@ color-themes:
       inline-meaning: '839496'
 
       # The words in the meanings section
-      meaning-word: 'f4f3f1'
+      meaning-word: 'f39c12'
       divider: '83949640'
 
+  theme3:
+    name: Verdant
+    light:
+      background: 'fafaf5'
+      accent: '4caf50'        # Green accent
+      meta-heading: 'a67c52'  # Warm golden-brown for section titles
+      inline-word: '2d2d2d'   # Dark word highlight
+      text: '37474f'          # Neutral dark text
+      shloka: '37474f'
+      gadya: '37474f'
+      anvaya: '37474f'
+      ps: '37474f'
+      inline-meaning: '37474f80'
+      meaning-word: '4caf50'  # Accent green for word
+      divider: 'a67c5240'
+
+    dark:
+      background: '0d1f1a'    # Deep green-black
+      accent: 'ffb300'        # Amber/gold accent
+      meta-heading: 'c9b37e'  # Soft gold for section titles
+      inline-word: 'f1f8f6'   # Very light highlight
+      text: 'b0c4b1'          # Muted gray-green text
+      shloka: 'b0c4b1'
+      gadya: 'b0c4b1'
+      anvaya: 'b0c4b1'
+      ps: 'b0c4b1'
+      inline-meaning: 'b0c4b1'
+      meaning-word: 'ffb300'  # Accent amber
+      divider: 'b0c4b140'
+
+  theme4:
+    name: Dawn
+    light:
+      background: 'fff8f0'    # soft parchment (not pure white)
+      accent: 'c0392b'        # deep ruby red
+      meta-heading: 'a97155'  # warm brown for section titles
+      inline-word: '2d2d2d'
+      text: '4a3f35'          # warm dark brownish gray
+      shloka: '4a3f35'
+      gadya: '4a3f35'
+      anvaya: '4a3f35'
+      ps: '4a3f35'
+      inline-meaning: '4a3f3580'
+      meaning-word: 'c0392b'
+      divider: 'a9715540'
+
+    dark:
+      background: '1b0e0b'    # deep brownish red-black
+      accent: 'e67e22'        # glowing amber-orange
+      meta-heading: 'd4a373'
+      inline-word: 'f4ede6'
+      text: 'bfaea2'
+      shloka: 'bfaea2'
+      gadya: 'bfaea2'
+      anvaya: 'bfaea2'
+      ps: 'bfaea2'
+      inline-meaning: 'bfaea2'
+      meaning-word: 'e67e22'
+      divider: 'bfaea240'
+
+  theme5:
+    name: Mist
+    light:
+      background: 'f0f4f8'    # misty gray-blue
+      accent: '2e86ab'        # sapphire blue
+      meta-heading: '6b7a8f'  # slate gray for section titles
+      inline-word: '1c1f24'
+      text: '2d3640'          # deep charcoal gray
+      shloka: '2d3640'
+      gadya: '2d3640'
+      anvaya: '2d3640'
+      ps: '2d3640'
+      inline-meaning: '2d364080'
+      meaning-word: '2e86ab'
+      divider: '6b7a8f40'
+
+    dark:
+      background: '0e1a22'    # very dark navy gray
+      accent: '00bcd4'        # bright cyan (ocean pop)
+      meta-heading: '90a4ae'  # muted gray-blue
+      inline-word: 'f1f3f4'
+      text: 'b0bec5'
+      shloka: 'b0bec5'
+      gadya: 'b0bec5'
+      anvaya: 'b0bec5'
+      ps: 'b0bec5'
+      inline-meaning: 'b0bec5'
+      meaning-word: '00bcd4'
+      divider: 'b0bec540'
+
+  theme6:
+    name: Regal
+    light:
+      background: 'f8f5fa'    # soft lavender-tinted parchment
+      accent: '6a1b9a'        # royal purple
+      meta-heading: 'b0844f'  # antique gold
+      inline-word: '2c2c2c'
+      text: '3b2f4a'          # deep plum-gray
+      shloka: '3b2f4a'
+      gadya: '3b2f4a'
+      anvaya: '3b2f4a'
+      ps: '3b2f4a'
+      inline-meaning: '3b2f4a80'
+      meaning-word: '6a1b9a'
+      divider: 'b0844f40'
+
+    dark:
+      background: '1a0f1d'    # deep purple-black
+      accent: 'ffd54f'        # golden amber
+      meta-heading: 'd4af37'  # rich gold
+      inline-word: 'f4edf8'
+      text: 'c1b4c8'
+      shloka: 'c1b4c8'
+      gadya: 'c1b4c8'
+      anvaya: 'c1b4c8'
+      ps: 'c1b4c8'
+      inline-meaning: 'c1b4c8'
+      meaning-word: 'ffd54f'
+      divider: 'c1b4c840'
+
+  theme7:
+    name: Lotus
+    light:
+      background: 'fff5f7'    # lotus petal pink
+      accent: 'e91e63'        # deep pink / rose red
+      meta-heading: '00897b'  # teal green for headings
+      inline-word: '2d2d2d'
+      text: '3f3f46'          # soft charcoal gray
+      shloka: '3f3f46'
+      gadya: '3f3f46'
+      anvaya: '3f3f46'
+      ps: '3f3f46'
+      inline-meaning: '3f3f4680'
+      meaning-word: 'e91e63'
+      divider: '00897b40'
+
+    dark:
+      background: '1a0f14'    # deep maroon-black
+      accent: '26a69a'        # fresh teal
+      meta-heading: 'ff80ab'  # soft pink highlight
+      inline-word: 'fbe9eb'
+      text: 'd7ccc8'
+      shloka: 'd7ccc8'
+      gadya: 'd7ccc8'
+      anvaya: 'd7ccc8'
+      ps: 'd7ccc8'
+      inline-meaning: 'd7ccc8'
+      meaning-word: '26a69a'
+      divider: 'd7ccc840'
+
+  theme8:
+    name: Neon
+    light:
+      background: 'f3f4f6'    # cool gray
+      accent: 'ff1744'        # neon red
+      meta-heading: '00c853'  # bright green
+      inline-word: '111111'
+      text: '212121'          # very dark gray
+      shloka: '212121'
+      gadya: '212121'
+      anvaya: '212121'
+      ps: '212121'
+      inline-meaning: '21212180'
+      meaning-word: 'ff1744'
+      divider: '00c85340'
+
+    dark:
+      background: '0d0d0d'    # near black
+      accent: '00e5ff'        # neon cyan
+      meta-heading: 'ff4081'  # neon magenta
+      inline-word: 'ffffff'
+      text: 'bdbdbd'
+      shloka: 'bdbdbd'
+      gadya: 'bdbdbd'
+      anvaya: 'bdbdbd'
+      ps: 'bdbdbd'
+      inline-meaning: 'bdbdbd'
+      meaning-word: '00e5ff'
+      divider: 'bdbdbd40'
+
+  theme9:
+    name: Autumn
+    light:
+      background: 'fdf6f0'    # warm parchment beige
+      accent: 'd35400'        # deep orange
+      meta-heading: '7b3f00'  # earthy brown
+      inline-word: '2c2c2c'
+      text: '4e342e'          # dark brown-gray
+      shloka: '4e342e'
+      gadya: '4e342e'
+      anvaya: '4e342e'
+      ps: '4e342e'
+      inline-meaning: '4e342e80'
+      meaning-word: 'd35400'
+      divider: '7b3f0040'
+
+    dark:
+      background: '1b0f0a'    # deep brown-black
+      accent: 'ff7043'        # bright autumn orange
+      meta-heading: 'ffcc80'  # pale amber
+      inline-word: 'fbe9e7'
+      text: 'd7ccc8'
+      shloka: 'd7ccc8'
+      gadya: 'd7ccc8'
+      anvaya: 'd7ccc8'
+      ps: 'd7ccc8'
+      inline-meaning: 'd7ccc8'
+      meaning-word: 'ff7043'
+      divider: 'd7ccc840'
+
+
+
 # Used in the generation of website, pdf & odt
-selected-theme: theme1
+selected-theme: theme2

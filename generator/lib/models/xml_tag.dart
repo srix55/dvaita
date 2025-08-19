@@ -22,7 +22,7 @@ enum XmlTag {
   ps(attributes: {}, tag: 'ps'),
   ps_ref(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'ps-ref'),
   meanings_section(attributes: {}, tag: 'meanings-section'),
-  meaning_point(attributes: {}, tag: 'meaning-point'),
+  word_with_meaning(attributes: {}, tag: 'word-with-meaning'),
   meaning_word(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'meaning-word'),
   meaning(attributes: {Attribute.lang}, tag: 'meaning'),
   grammar_section(attributes: {}, tag: 'grammar-section'),
