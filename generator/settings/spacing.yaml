@@ -3,7 +3,7 @@ spacing-themes:
     name: default
 
     # Useful for tweaking inline-meaning display
-    line-height: '1.5' # Overall line height
+    line-height: '1.75' # Overall line height
     line-height-for-superscript-containing-text: '2.25'
     inline-text-offset: '-38px'
 

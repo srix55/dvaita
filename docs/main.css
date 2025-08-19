@@ -529,7 +529,7 @@ body {
     font-family: "Noto Sans Devanagari", sans-serif;
     font-weight: 400;
     font-style: normal;
-    line-height: 1.5;
+    line-height: 1.75;
     font-variation-settings:
             "wdth" 100;
 }
@@ -684,44 +684,127 @@ hr {
     user-select: none;
 }
 
+.external-link {
+    text-decoration: underline;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.external-link:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.grammar-container .external-link {
+    font-size: 85%;
+}
+
+.shabda,
+.dhatu {
+    color: var(--meaning-word);
+}
+
+.grammar-container a {
+  text-decoration: underline;
+}
+
+.grammar-container a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
 .grammar-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 600px));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-content: center;
-    column-gap: 20px;
-    row-gap: 0;
-    /*max-width: 900px;*/  /* or whatever feels good */
+    gap: 40px;
     margin: 0 auto;    /* centers the grid */
 }
 
 table, th, td {
     border: 1px solid var(--divider);
-    padding-left: 10px;
-    padding-right: 10px;
+    text-align: left;
+    padding: 5px 15px 0 15px;
     font-weight: normal;
+    vertical-align: center;
     border-collapse: collapse; /* makes single border instead of double */
+}
+
+.grammar-container .shabda-roopa th,
+.grammar-container .kriya-roopa .lakara-roopa th
+{
+    opacity: 0.5;
+    font-size: 70%;
+}
+
+.grammar-container .shabda-roopa table tr th:first-child,
+.grammar-container .kriya-roopa .lakara-roopa th:first-child
+{
+    font-size: 100%;
+    display: inline-block;
+}
+
+.grammar-container .shabda-roopa td:first-child,
+.grammar-container .kriya-roopa .lakara-roopa td:first-child
+{
+    opacity: 0.5;
+    font-size: 70%;
 }
 
 .meanings-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
-    column-gap: 10px;
-    row-gap: 0;
-    /*max-width: 900px;*/  /* or whatever feels good */
+    gap: 3px;
     margin: 0 auto;    /* centers the grid */
 }
 
 .word-with-meaning,
 .grammar-point {
+    display: inline-block;
+}
+
+.shabda-roopa,
+.kriya-roopa,
+.lakara-roopa {
+    display: inline-block;
+}
+
+.lakara-roopa {
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .shabda-meta,
+.lakara-meta,
 .kriya-meta {
+    display: inline-block;
+    width: 100%;
+}
+
+.shabda-meta,
+.lakara-meta {
+    margin-bottom: 4px;
+}
+
+.kriya-meta {
+    margin-bottom: 10px;
 }
 
 .meaning-word {
+    display: inline-block;
     color: var(--meaning-word);
+}
+
+.meaning-word:target {
+    animation: material-shake 0.5s cubic-bezier(.36,.07,.19,.97) both 3;
+}
+
+@keyframes material-shake {
+    10%, 90% { transform: translateX(-1px); }
+    20%, 80% { transform: translateX(2px); }
+    30%, 50%, 70% { transform: translateX(-4px); }
+    40%, 60% { transform: translateX(4px); }
 }
 
 .dotted-underline {

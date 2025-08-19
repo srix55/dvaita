@@ -152,11 +152,10 @@ class RecursiveHandler {
         buff.writeln('<hr><div class="san-meta-heading meta-heading">अर्थाः</div><div style="margin-top: ${Settings.spacing.paraMarginTopBottom}"></div>');
         buff.writeln('<div class="meanings-container">');
         _handleNesting(xml);
-        buff.writeln('</div> <!-- meanings-container end -->');
         buff.writeln('</div> <!-- meanings-section end -->');
         break;
       case XmlTag.word_with_meaning:
-        buff.write('<div class="word-with-meaning extra-line-height">');
+        buff.write('<div class="word-with-meaning">');
         _handleNesting(xml);
         buff.writeln('</div>');
         break;
@@ -178,21 +177,20 @@ class RecursiveHandler {
         buff.writeln('<div class="grammar-container">');
         _handleNesting(xml);
         buff.writeln('</div> <!-- grammar-container end -->');
-        buff.writeln('</div> <!-- grammar-section end -->');
         break;
       case XmlTag.grammar_point:
         String? refId = xml.getAttribute(Attribute.ref_id.tag);
         String grammarPrefix = Constants.grammarPrefix;
         String actualRefId = refId == null ? '' : 'id = "$grammarPrefix$refId"';
-        buff.write('<div $actualRefId class="grammar-point extra-line-height">');
+        buff.write('<div $actualRefId class="grammar-point">');
         _handleNesting(xml);
         String? extLinks = xml.getAttribute(Attribute.ext_link.tag);
         if (extLinks != null) {
-          buff.writeln("<div>");
+          buff.writeln('<div style="display: inline-block; margin-top: 8px; width: 100%;">');
           List<String> linkWithName = extLinks.split('|');
           for (String l in linkWithName) {
             var link = LinkWithName.parse(l);
-            buff.write('<a href="${link.url}" lang="${link.lang}" target="_blank" rel="noopener noreferrer">${link.name}</a> ');
+            buff.write('<a href="${link.url}" class="external-link ${link.lang}-text" target="_blank" rel="noopener noreferrer">${link.name}</a> ');
           }
           buff.writeln("</div>");
         }
@@ -206,11 +204,11 @@ class RecursiveHandler {
         String? shabdaName = xml.getAttribute(Attribute.name.tag);
         if (ending != null) shabdaMeta.write('$endingकारान्तः ');
         if (linga != null) shabdaMeta.write('$linga ');
-        if (shabdaName != null) shabdaMeta.write(' $shabdaName शब्दः');
+        if (shabdaName != null) shabdaMeta.write(' <span class="shabda">$shabdaName शब्दः</span>');
         if (shabdaMeta.isNotEmpty)
           buff.writeln('<div class="shabda-meta san-text">${shabdaMeta.toString()}</div>');
         if (xml.childElements.isNotEmpty)
-          buff.writeln('<table><tr><th></th><th class="san-text">एकवचनं</th><th class="san-text">द्विवचनं</th><th class="san-text">बहुवचनं</th></tr>');
+          buff.writeln('<table><tr><th class="san"></th><th class="san-text">एकवचनं</th><th class="san-text">द्विवचनं</th><th class="san-text">बहुवचनं</th></tr>');
         _handleNesting(xml);
         if (xml.childElements.isNotEmpty)
           buff.writeln('</table>');
@@ -234,8 +232,8 @@ class RecursiveHandler {
         String? gana = xml.getAttribute(Attribute.gana.tag);
         String? karmaka = xml.getAttribute(Attribute.karmaka.tag);
         String? it = xml.getAttribute(Attribute.it.tag);
-        kriyaMeta.write('$dhatu ');
-        if (dhatuMeaning != null) kriyaMeta.write('$dhatuMeaning ');
+        kriyaMeta.write('<span class="dhatu">$dhatu </span>');
+        if (dhatuMeaning != null) kriyaMeta.write('<span class="dhatu">$dhatuMeaning</span> ');
         if (gana != null) kriyaMeta.write('$gana ');
         if (karmaka != null) kriyaMeta.write('$karmaka ');
         if (it != null) kriyaMeta.write('$it ');
@@ -254,7 +252,7 @@ class RecursiveHandler {
         if (prayoga != null) lakaraMeta.write('$prayoga ');
         if (padi != null) lakaraMeta.write('$padi ');
         if (lakaraMeta.isNotEmpty)
-          buff.writeln('<div class="kriya-meta san-text">${lakaraMeta.toString()}</div>');
+          buff.writeln('<div class="lakara-meta san-text">${lakaraMeta.toString()}</div>');
         if (xml.childElements.isNotEmpty)
           buff.writeln('<table><tr class="san-text"><th></th><th class="san-text">एकवचनं</th><th class="san-text">द्विवचनं</th><th class="san-text">बहुवचनं</th></tr>');
         _handleNesting(xml);
