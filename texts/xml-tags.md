@@ -79,30 +79,35 @@
       - Attributes:-
         - lang: kan/eng/san, 3 letter iso standard for language
 - grammar-section: Section defining grammatical points
-  - grammar-point: A grammatical point
+  - grammar-point: A grammatical point. Can contain `p`, `shabda-roopa`, `kriya-roopa` tags within.
     - Attributes:-
       - ref-id: Id in reference to a marked segment
       - lang: kan/eng/san, 3 letter iso standard for language
-  - shabda-roopa:
-    - Attributes
-      - ending: अ, इ, etc
-      - linga: पु, स्त्री, न
-      - name: शब्द name. example: राम
-    - vibhakti
-      - id: प्र, द्वि, तृ, च, प, ष, स, सं
-        - vachana:
-          - Attributes:-
-            - id: एक, द्वि, बहु
-  - kriya-roopa:
-    - Attributes:-
-      - dhatu
-      - lakara
-      - dhatu-meaning
-      - gana
-      - prayoga: kartari/karmani
-      - padi: atmane/parasmai/ubhaya
-    - purusha
-      - id: प्र, म, उ
-      - vachana:
-        - Attributes:-
-          - id: एक, द्वि, बहु
+      - ext-link: `|` separated external links, say to ashtadhyayi.com etc. Example: `ext-link="(san:अष्टाध्यायी)[https://ashtadhyayi.com/dhatu/01.0018?tab=ting]|(eng:Wiki)[https://wiki.com/sanskrit]"` 
+    - shabda-roopa:
+      - Attributes
+        - ending: अ, इ, etc
+        - linga: पु, स्त्री, न
+        - name: शब्द name. example: राम
+      - vibhakti
+        - name: प्र, द्वि, तृ, च, प, ष, स, सं
+          - vachana:
+            - Attributes:-
+              - name: एक, द्वि, बहु
+    - kriya-roopa:
+      - Attributes:-
+        - dhatu
+        - dhatu-meaning
+        - gana
+        - karmaka: सकर्मक/अकर्मक/द्विकर्मक
+        - it: सेट्/अनिट्
+      - lakara-roopa
+        - Attributes
+          - lakara: लट्/लोट्/लङ्/विधिलिङ् etc
+          - prayoga: कर्तरी/कर्मणी 
+          - padi: आत्मने/परस्मै
+        - purusha
+          - name: प्र, म, उ
+          - vachana:
+            - Attributes:-
+              - name: एक, द्वि, बहु

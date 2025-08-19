@@ -97,7 +97,27 @@
                 </word-with-meaning>
             </meanings-section>
             <grammar-section>
-                <grammar-point ref-id="w1">अकारान्तः पुल्लिङ्गः कान्त शब्दः</grammar-point>
+                <grammar-point ref-id="w1" lang="san">
+                    <shabda-roopa ending="अ" linga="पु" name="कान्त">
+                        <vibhakti name="प्र"><vachana name="एक">कान्तः</vachana><vachana name="द्वि">कान्तौ</vachana><vachana name="बहु">कान्ताः</vachana></vibhakti>
+                        <vibhakti name="सं"><vachana name="एक">हे कान्त</vachana><vachana name="द्वि">हे कान्तौ</vachana><vachana name="बहु">हे कान्ताः</vachana></vibhakti>
+                        <vibhakti name="द्वि"><vachana name="एक">कान्तम्</vachana><vachana name="द्वि">कान्तौ</vachana><vachana name="बहु">कान्तान्</vachana></vibhakti>
+                        <vibhakti name="तृ"><vachana name="एक">कान्तेन</vachana><vachana name="द्वि">कान्ताभ्याम्</vachana><vachana name="बहु">कान्तैः</vachana></vibhakti>
+                        <vibhakti name="च"><vachana name="एक">कान्ताय</vachana><vachana name="द्वि">कान्ताभ्याम्</vachana><vachana name="बहु">कान्तेभ्यः</vachana></vibhakti>
+                        <vibhakti name="प"><vachana name="एक">कान्तात्</vachana><vachana name="द्वि">कान्ताभ्याम्</vachana><vachana name="बहु">कान्तेभ्यः</vachana></vibhakti>
+                        <vibhakti name="ष"><vachana name="एक">कान्तस्य</vachana><vachana name="द्वि">कान्तयोः</vachana><vachana name="बहु">कान्तानाम्</vachana></vibhakti>
+                        <vibhakti name="स"><vachana name="एक">कान्ते</vachana><vachana name="द्वि">कान्तयोः</vachana><vachana name="बहु">कान्तेषु</vachana></vibhakti>
+                    </shabda-roopa>
+                </grammar-point>
+                <grammar-point lang="san" ext-link="(san:अष्टाध्यायी)[https://ashtadhyayi.com/dhatu/01.0018?tab=ting]">
+                    <kriya-roopa dhatu="स्वद्" dhatu-meaning="ष्वदँ आस्वादने" gana="भ्वादि" karmaka="सकर्मक" it="सेट्">
+                        <lakara-roopa lakara="लट्" prayoga="कर्तरि" padi="आत्मने">
+                            <purusha name="प्र"><vachana name="एक">स्वदते</vachana><vachana name="द्वि">स्वदेते</vachana><vachana name="बहु">स्वदन्ते</vachana></purusha>
+                            <purusha name="म"><vachana name="एक">स्वदसे</vachana><vachana name="द्वि">स्वदेथे</vachana><vachana name="बहु">स्वदध्वे</vachana></purusha>
+                            <purusha name="उ"><vachana name="एक">स्वदे</vachana><vachana name="द्वि">स्वदावहे</vachana><vachana name="बहु">स्वदामहे</vachana></purusha>
+                        </lakara-roopa>
+                    </kriya-roopa>
+                </grammar-point>
             </grammar-section>
         </moola>
     </chapter>
