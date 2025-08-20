@@ -236,7 +236,7 @@ hr {
 
 .grammar-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     justify-content: center;
     gap: 40px;
     margin: 0 auto;    /* centers the grid */
@@ -274,7 +274,7 @@ table, th, td {
 
 .meanings-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     justify-content: center;
     gap: 3px;
     margin: 0 auto;    /* centers the grid */
