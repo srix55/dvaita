@@ -617,6 +617,12 @@ hr {
     margin-bottom: 10px;
 }
 
+.vyakhyana .shloka {
+    color: var(--text);
+    margin-bottom: 0;
+    line-height: 1.75; 
+}
+
 .anvaya {
     color: var(--anvaya);
     line-height: 2.25;
@@ -856,6 +862,12 @@ table, th, td {
   font-weight: 500;
 }
 
+.vyakhyana .san-shloka {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
 .san-gadya-meta {
   font-family: "Noto Sans Devanagari", sans-serif;
   font-size: 12px;
@@ -915,6 +927,12 @@ table, th, td {
   font-weight: 500;
 }
 
+.vyakhyana .kan-shloka {
+  font-family: "Noto Sans Kannada", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 .kan-gadya-meta {
   font-family: "Noto Sans Kannada", sans-serif;
   font-size: 12px;
@@ -972,6 +990,12 @@ table, th, td {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   font-weight: 500;
+}
+
+.vyakhyana .eng-shloka {
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
 }
 
 .eng-gadya-meta {

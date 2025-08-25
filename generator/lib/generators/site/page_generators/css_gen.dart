@@ -138,6 +138,12 @@ hr {
     margin-bottom: 10px;
 }
 
+.vyakhyana .shloka {
+    color: var(--text);
+    margin-bottom: 0;
+    line-height: ${Settings.spacing.lineHeight}; 
+}
+
 .anvaya {
     color: var(--anvaya);
     line-height: ${Settings.spacing.lineHeightToContainInline};
@@ -383,6 +389,12 @@ $fontDefinitions
       buff.writeln('  font-family: "${f.shlokaFontFamily}", sans-serif;');
       buff.writeln('  font-size: ${f.shlokaSize};');
       buff.writeln('  font-weight: ${f.shlokaWeight};');
+      buff.writeln('}');
+      buff.writeln('');
+      buff.writeln('.vyakhyana .$lang-shloka {');
+      buff.writeln('  font-family: "${f.textFontFamily}", sans-serif;');
+      buff.writeln('  font-size: ${f.textSize};');
+      buff.writeln('  font-weight: ${f.textWeight};');
       buff.writeln('}');
       buff.writeln('');
       buff.writeln('.$lang-gadya-meta {');

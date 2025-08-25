@@ -125,9 +125,9 @@ class RecursiveHandler {
           buff.writeln('<hr>');
         buff.writeln('<div class="san-meta-heading meta-heading">व्याख्यानं - ${bookInfo.vyakhyanaIdToAuthorNameMap[vyId]!.string}</div>');
         if (xml.childElements.isEmpty) {
-          buff.writeln('<div class="$lang-text text extra-line-height">${xml.innerText}</div>');
+          buff.writeln('<div class="vyakhyana $lang-text text extra-line-height">${xml.innerText}</div>');
         } else {
-          buff.write('<div class="$lang-text text extra-line-height">');
+          buff.write('<div class="vyakhyana $lang-text text extra-line-height">');
           _handleNesting(xml);
           buff.write('</div>');
         }
