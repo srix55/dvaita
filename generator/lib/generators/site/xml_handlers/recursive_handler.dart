@@ -155,8 +155,20 @@ class RecursiveHandler {
       case XmlTag.s:
         SegmentXmlHandler(xml: xml, bookInfo: bookInfo, buff: buff).handle();
         break;
+      case XmlTag.ps_section:
+        buff.writeln('<hr style="opacity: 0;">');
+        buff.writeln('<div class="ps-container">');
+        _handleNesting(xml);
+        buff.writeln('</div> <!-- ps-section end -->');
+        break;
       case XmlTag.ps:
-      case XmlTag.ps_ref:
+        String? refId = xml.getAttribute(Attribute.ref_id.tag);
+        String actualRefId = refId == null ? '' : 'id = "${Constants.psPrefix}$refId"';
+        String lang = xml.getAttribute(Attribute.lang.tag)!;
+        buff.write('<div $actualRefId class="$lang-ps ps">${Constants.psSymbol} ');
+        if (xml.childElements.isEmpty) buff.write(xml.innerText);
+        else _handleNesting(xml);
+        buff.write('</div>');
         break;
       case XmlTag.meanings_section:
         buff.writeln('<hr><div class="san-meta-heading meta-heading">अर्थाः</div><div style="margin-top: ${Settings.spacing.paraMarginTopBottom}"></div>');

@@ -347,6 +347,19 @@ table, th, td {
     text-decoration: none; /* prevent default underline */
 }
 
+.ps-container {
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.ps {
+    scroll-margin-top: 85px;
+}
+
+.ps:target {
+    animation: material-shake 0.5s cubic-bezier(.36,.07,.19,.97) both 3;
+}
+
 /* Font definitions */
 $fontDefinitions
     ''';

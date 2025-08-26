@@ -40,7 +40,7 @@ font-themes:
       # Any ps points
       ps-font-family: 'Noto Sans Devanagari'
       ps-weight: '400'
-      ps-size: '12px'
+      ps-size: '16px'
       
       # inline-meanings (superscripts/subscripts) for text segments
       inline-font-family: 'Noto Sans Devanagari'
@@ -84,7 +84,7 @@ font-themes:
       # Any ps points
       ps-font-family: 'Noto Sans Kannada'
       ps-weight: '400'
-      ps-size: '12px'
+      ps-size: '16px'
 
       # inline-meanings (superscripts/subscripts) for text segments
       inline-font-family: 'Noto Sans Kannada'
@@ -128,7 +128,7 @@ font-themes:
       # Any ps points
       ps-font-family: 'Roboto'
       ps-weight: '400'
-      ps-size: '12px'
+      ps-size: '16px'
 
       # inline-meanings (superscripts/subscripts) for text segments
       inline-font-family: 'Roboto'

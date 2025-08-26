@@ -65,8 +65,8 @@
       - m: Meaning. Engine generates a clickable link to the word in the meanings section
       - g: Grammar. Engine generates a clickable link to the word in the grammar section
       - ps: Is linked to a point in the post-section
-- ps: post section
-- ps-ref: reference to a post section
+- ps-section: post section
+- ps: reference to a post section
   - Attributes:-
     - ref-id: Id in reference to a marked segment
     - lang: kan/eng/san, 3 letter iso standard for language
