@@ -179,7 +179,7 @@ hr {
 }
 
 .superscript-links-container:first-child {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .meaning-link,

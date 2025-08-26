@@ -53,7 +53,7 @@ function cycleTheme() {
 
 document.documentElement.classList.add('no-transitions');
 
-// Run at page load
+// Run at page-load
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   
