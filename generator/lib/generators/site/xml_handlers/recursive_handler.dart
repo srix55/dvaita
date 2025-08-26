@@ -117,11 +117,21 @@ class RecursiveHandler {
           buff.write('</div>');
         }
         break;
+      case XmlTag.pada_cheda:
+        buff.writeln('<hr><div class="san-meta-heading meta-heading">पदच्छेदः</div>');
+        if (xml.childElements.isEmpty) {
+          buff.writeln('<div class="san-text text extra-line-height">${xml.innerText}</div>');
+        } else {
+          buff.write('<div class="san-text extra-line-height">');
+          _handleNesting(xml);
+          buff.write('</div>');
+        }
+        break;
       case XmlTag.vyakhyana:
         String vyId = xml.getAttribute(Attribute.ref_id.tag)!;
         String lang = xml.getAttribute(Attribute.lang.tag) ?? 'san';
         XmlElement? previousSibling = xml.previousElementSibling;
-        if (previousSibling?.localName == XmlTag.text_with_heading.tag || previousSibling?.localName == XmlTag.anvaya.tag || previousSibling?.localName == XmlTag.vyakhyana.tag)
+        if (previousSibling?.localName == XmlTag.text_with_heading.tag || previousSibling?.localName == XmlTag.anvaya.tag || previousSibling?.localName == XmlTag.vyakhyana.tag || previousSibling?.localName == XmlTag.pada_cheda.tag)
           buff.writeln('<hr>');
         buff.writeln('<div class="san-meta-heading meta-heading">व्याख्यानं - ${bookInfo.vyakhyanaIdToAuthorNameMap[vyId]!.string}</div>');
         if (xml.childElements.isEmpty) {

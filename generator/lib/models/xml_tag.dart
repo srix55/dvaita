@@ -16,6 +16,7 @@ enum XmlTag {
   shloka_pada(attributes: {}, tag: 'shloka-pada'),
   gadya(attributes: {Attribute.lang}, tag: 'gadya'),
   anvaya(attributes: {Attribute.lang}, tag: 'anvaya'),
+  pada_cheda(attributes: {}, tag: 'pada-cheda'),
   vyakhyana(attributes: {Attribute.lang, Attribute.ref_id}, tag: 'vyakhyana'),
   p(attributes: {Attribute.lang}, tag: 'p'),
   s(attributes: {Attribute.em, Attribute.lang, Attribute.id}, tag: 's'),

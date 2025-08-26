@@ -47,6 +47,7 @@
   - anvaya: Shloka anvaya
     - Attributes:-
       - lang: kan/eng/san, 3 letter iso standard for language
+  - pada-cheda
   - vyakhyana: The actual vyakhyana
     - Attributes:-
       - lang: kan/eng/san, 3 letter iso standard for language
